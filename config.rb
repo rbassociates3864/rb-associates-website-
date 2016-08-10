@@ -1,3 +1,5 @@
+require 'slim'
+
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -18,6 +20,9 @@ page '/*.txt', layout: false
 
 # General configuration
 
+activate :sprockets
+sprockets.append_path File.join(root, "bower_components")
+
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
@@ -36,6 +41,7 @@ end
 
 # Build-specific configuration
 configure :build do
+  activate :autoprefixer
   # Minify CSS on build
   # activate :minify_css
 

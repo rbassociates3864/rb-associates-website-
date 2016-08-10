@@ -1,0 +1,22 @@
+{
+  "name": "rb-associates-website",
+  "homepage": "https://github.com/just-be-natural/rb-associates-website",
+  "authors": [
+    "Frank Hock <frank.hock@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~3.1.0"
+  }
+}
