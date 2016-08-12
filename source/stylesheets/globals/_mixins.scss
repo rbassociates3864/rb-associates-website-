@@ -1,0 +1,18 @@
+@mixin triangle {
+  position: relative;
+  text-align: center;
+
+  &:after {
+    content:'';
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    margin-left: -15px;
+    width: 0;
+    height: 0;
+    border-top: solid 15px $rb-blue;
+    border-left: solid 15px transparent;
+    border-right: solid 15px transparent;
+  }
+
+}
