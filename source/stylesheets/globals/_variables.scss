@@ -1,8 +1,20 @@
 // https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss
 
+//== Branding
+//
+//##
+
+$rb-blue: #3FA2F7;
+
 
 //== Navbar
 //
 //##
 
-$navbar-border-radius: 0px;
+$navbar-default-color:            #ffffff;
+$navbar-default-bg:               $rb-blue;
+
+$navbar-default-link-color:       #ffffff;
+$navbar-default-link-hover-color: #f9f9f9;
+
+$navbar-border-radius:            0px;

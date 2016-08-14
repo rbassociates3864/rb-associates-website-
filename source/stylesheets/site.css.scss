@@ -1,7 +1,11 @@
 @charset "utf-8";
 @import "normalize";
 
+@import 'globals/index';
 @import "bootstrap-sprockets";
 @import 'bootstrap';
 
-@import 'globals/index';
+@import 'modules/index';
+
+@import 'base';
+@import 'layout';
