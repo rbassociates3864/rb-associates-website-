@@ -1,10 +1,83 @@
+// Header
+
+.navbar-fixed-top {
+  border: 0;
+}
+.navbar-brand {
+  position: relative;
+  padding: 1rem 15px 0;
+
+  img {
+    height: 3.125rem;
+  }
+}
+
+.navbar-toggle {
+  margin-right: 5px;
+}
+
+// Billboard
+
 .billboard {
-  padding: 6rem 1rem;
-  background: url(../images/park_plaza.jpg);
+  padding: 7rem 1.25rem;
+  background: url(../images/park_plaza.jpg) center center no-repeat;
+  background-size: 120% 100%;
   text-align: center;
 
   .billboard-title {
     margin: 0;
     font-size: 3.25rem;
+  }
+
+  .billboard-cta {
+    margin: 3rem 0 0;
+    padding: 1.125rem 1rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+}
+
+.featured-property {
+  margin-bottom: 2rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.footer {
+  padding: 3rem 0;
+  background: #000000;
+
+  &,
+  a {
+    color: #ffffff;
+  }
+
+  .footer-title {
+    margin: 0 0 3rem;
+    letter-spacing: 0.125rem;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    color: $footer-color;
+  }
+
+  .nav a {
+    display: inline-block;
+    padding: 1rem 0;
+  }
+
+  .nav li:first-child a {
+    padding-top: 0;
+  }
+
+  .copyright {
+    margin: 1rem 0 0;
+    font-size: 1.25rem;
+    color: $footer-color;
   }
 }

@@ -4,14 +4,18 @@ title: Welcome to Middleman
 
 .billboard
   h1.billboard-title Lehigh Valley's Premier Commercial Real Estate Developers
+  
+  a.billboard-cta.btn.btn-primary(href='/') View Properties
 
-.featured-properties
-  h2.title Featured Properties
+section.section.gray
+  .container
+    h2.section__title Featured Properties
 
-  .row
-    .col-sm-12
-      img(src='/images/park_plaza.jpg')
-    .col-sm-12
-      h3 Property
-    .col-sm-12
-      h3 Property
+    .featured-properties
+      .row
+        .col-sm-12.featured-property
+          = image_tag 'lehigh-valley-animal-hospital.jpg'
+        .col-sm-12.featured-property
+          = image_tag 'lehigh-valley-animal-hospital.jpg'
+        .col-sm-12.featured-property
+          = image_tag 'lehigh-valley-animal-hospital.jpg'

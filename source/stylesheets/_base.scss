@@ -1,0 +1,16 @@
+body {
+  padding-top: 50px;
+}
+
+.section {
+  padding: 6rem 0;
+
+  &.gray {
+    background: $section-gray-bg;
+  }
+}
+
+.section__title {
+  margin: 0 0 5rem;
+  @include triangle;
+}

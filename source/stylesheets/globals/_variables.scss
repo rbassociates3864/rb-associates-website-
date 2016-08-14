@@ -5,16 +5,35 @@
 //##
 
 $rb-blue: #3FA2F7;
+$section-gray-bg: #f7f7f7;
+
+$brand-primary: $rb-blue;
+
+$footer-color: #919496;
+
+
+//== Components
+//
+//##
+
+$border-radius-base:        2px !default;
+$border-radius-large:       3px !default;
+$border-radius-small:       1px !default;
 
 
 //== Navbar
 //
 //##
 
-$navbar-default-color:            #ffffff;
-$navbar-default-bg:               $rb-blue;
+$navbar-default-color:            #333333;
+$navbar-default-bg:               fade-out(#ffffff, 0.05);
 
-$navbar-default-link-color:       #ffffff;
-$navbar-default-link-hover-color: #f9f9f9;
+$navbar-default-link-color:       #333333;
+$navbar-default-link-hover-color: #111111;
 
 $navbar-border-radius:            0px;
+
+// Navbar toggle
+$navbar-default-toggle-hover-bg:           #ffffff !default;
+$navbar-default-toggle-icon-bar-bg:        #333333 !default;
+$navbar-default-toggle-border-color:       #ffffff !default;
