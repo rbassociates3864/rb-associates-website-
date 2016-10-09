@@ -23,6 +23,9 @@ page '/*.txt', layout: false
 activate :sprockets
 sprockets.append_path File.join(root, "bower_components")
 
+# Pretty URLs
+activate :directory_indexes
+
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
@@ -34,9 +37,6 @@ end
 
 # Methods defined in the helpers block are available in templates
 # helpers do
-#   def some_helper
-#     "Helping"
-#   end
 # end
 
 # Build-specific configuration

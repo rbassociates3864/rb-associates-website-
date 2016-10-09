@@ -1,21 +1,47 @@
 ---
-title: Welcome to Middleman
+title: Commercial Real Estate Developers in Lehigh Valley, PA | RB Associates
 ---
 
 .billboard
-  h1.billboard-title Lehigh Valley's Premier Commercial Real Estate Developers
-  
-  a.billboard-cta.btn.btn-primary(href='/') View Properties
+  .mask
+  h1.billboard-title Grow With Us
+  p.billboard-subtitle We're a client-focused Lehigh Valley commercial real estate firm.
 
-section.section.gray
+  a.billboard-cta.btn.btn-primary-alt(href='/') View Properties
+  a.billboard-cta.btn.btn-primary(href='/') Contact Us
+  
+section.section
+  .container
+    h2.section__title Why Us
+    p.section__subtitle At RB Associates, we believe the relationships built with our clients are invaluable. We strive to conduct ourselves with the highest level of integrity and commitment.
+    
+section.section
   .container
     h2.section__title Featured Properties
 
     .featured-properties
       .row
-        .col-sm-12.featured-property
-          = image_tag 'lehigh-valley-animal-hospital.jpg'
-        .col-sm-12.featured-property
-          = image_tag 'lehigh-valley-animal-hospital.jpg'
-        .col-sm-12.featured-property
-          = image_tag 'lehigh-valley-animal-hospital.jpg'
+        .col-sm-12.col-md-6
+          .featured-property
+            = image_tag 'https://rb-associates.imgix.net/park-plaza.jpg?w=1200'
+            .inner
+              h3.featured-property-title Park Plaza
+              = link_to 'Learn More', '/properties/park-plaza.html', class: 'featured-property-link'
+        .col-sm-12.col-md-6
+          .featured-property
+            = image_tag 'https://rb-associates.imgix.net/park-plaza.jpg?w=1200'
+            .inner
+              h3.featured-property-title Park Plaza
+              = link_to 'Learn More', '/park-plaza.html', relative: true, class: 'featured-property-link'
+        .col-sm-12.col-md-6
+          .featured-property
+            = image_tag 'https://rb-associates.imgix.net/lehigh-valley-animal-hospital.jpg?w=1200'
+            .inner
+              h3.featured-property-title Locust Manor
+              = link_to 'Learn More', '/park-plaza.html', relative: true, class: 'featured-property-link'
+        .col-sm-12.col-md-6
+          .featured-property
+            = image_tag 'https://rb-associates.imgix.net/courtney-3.jpg?w=1200'
+            .inner
+              h3.featured-property-title Courtney III
+              = link_to 'Learn More', '/park-plaza.html', relative: true, class: 'featured-property-link'

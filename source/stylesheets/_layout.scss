@@ -1,14 +1,28 @@
 // Header
 
+.navbar {
+  @include breakpoint(md) {
+    height: 60px;
+  }
+}
+
 .navbar-fixed-top {
   border: 0;
 }
 .navbar-brand {
   position: relative;
-  padding: 1rem 15px 0;
+  padding: 1.25rem 15px 0;
 
   img {
-    height: 3.125rem;
+    height: 2.5rem;
+  }
+
+  @include breakpoint(md) {
+    padding-top: 1.5rem;
+
+    img {
+      height: 3rem;
+    }
   }
 }
 
@@ -16,68 +30,24 @@
   margin-right: 5px;
 }
 
-// Billboard
-
-.billboard {
-  padding: 7rem 1.25rem;
-  background: url(../images/park_plaza.jpg) center center no-repeat;
-  background-size: 120% 100%;
-  text-align: center;
-
-  .billboard-title {
-    margin: 0;
-    font-size: 3.25rem;
+.navbar-nav {
+  @include breakpoint(md) {
+    float: right;
   }
 
-  .billboard-cta {
-    margin: 3rem 0 0;
-    padding: 1.125rem 1rem;
-    font-size: 1.5rem;
+  > li > a {
     text-transform: uppercase;
+    letter-spacing: 0.15rem;
+
+    @include breakpoint(md) {
+      padding: 20px 15px;
+    }
   }
 }
 
-.featured-property {
-  margin-bottom: 2rem;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  img {
-    width: 100%;
-  }
-}
-
-.footer {
-  padding: 3rem 0;
-  background: #000000;
-
-  &,
-  a {
-    color: #ffffff;
-  }
-
-  .footer-title {
-    margin: 0 0 3rem;
-    letter-spacing: 0.125rem;
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    color: $footer-color;
-  }
-
-  .nav a {
-    display: inline-block;
-    padding: 1rem 0;
-  }
-
-  .nav li:first-child a {
-    padding-top: 0;
-  }
-
-  .copyright {
-    margin: 1rem 0 0;
-    font-size: 1.25rem;
-    color: $footer-color;
+.contact-btn {
+  @include breakpoint(md) {
+    margin: 1.25rem 0 0 1rem;
+    float: right;
   }
 }

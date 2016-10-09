@@ -4,13 +4,11 @@
 //
 //##
 
-$rb-blue: #3FA2F7;
+$rb-blue:         #3FA2F7;
+$blue-text:       #297FCA;
 $section-gray-bg: #f7f7f7;
-
-$brand-primary: $rb-blue;
-
-$footer-color: #919496;
-
+$brand-primary:   $rb-blue;
+$footer-color:    #919496;
 
 //== Components
 //
@@ -27,11 +25,13 @@ $border-radius-small:       1px !default;
 
 $navbar-default-color:            #333333;
 $navbar-default-bg:               fade-out(#ffffff, 0.05);
+// $navbar-default-bg:               fade-out(#52ff00, 0.05);
 
 $navbar-default-link-color:       #333333;
 $navbar-default-link-hover-color: #111111;
 
 $navbar-border-radius:            0px;
+$grid-float-breakpoint: 992px !default;
 
 // Navbar toggle
 $navbar-default-toggle-hover-bg:           #ffffff !default;

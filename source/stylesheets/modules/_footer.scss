@@ -1,0 +1,85 @@
+.skyline {
+  height: 55px;
+  position: relative;
+  top: 5px;
+  background: url(../images/skyline.svg) repeat-x;
+
+  @include breakpoint(md) {
+    height: 100px;
+    top: 10px;
+  }
+}
+
+.footer {
+  padding: 3rem 0;
+  background: #111111;
+
+  &,
+  a {
+    color: #f1f1f1;
+  }
+
+  .footer-widget {
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-title {
+    margin: 0 0 2rem;
+    letter-spacing: 0.125rem;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    color: $footer-color;
+
+    @include breakpoint(md) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .nav a {
+    display: inline-block;
+    padding: 0.5rem 0;
+  }
+
+  .nav li:first-child a {
+    padding-top: 0;
+  }
+
+  .copyright {
+    margin: 1rem 0 0;
+    font-size: 1.25rem;
+    color: $footer-color;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+}
+
+.footer-logo {
+  display: none;
+
+  @include breakpoint(md) {
+    display: inline-block;
+    width: 70%;
+    margin-top: 2rem;
+  }
+}
+
+.footer-contact-info {
+  li {
+    padding: 0.5rem 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+}
+
+.footer-copyright-logo {
+  width: 14rem;
+  margin-bottom: 0.5rem;
+
+  @include breakpoint(md) {
+    display: none;
+  }
+}

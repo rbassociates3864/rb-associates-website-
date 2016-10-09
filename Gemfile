@@ -14,6 +14,7 @@ gem 'middleman-sprockets'
 gem 'middleman-livereload'
 gem 'middleman-slim', require: false
 gem 'middleman-autoprefixer'
+gem 'font-awesome-middleman'
 
 # Assets
 gem 'bootstrap-sass', '~> 3.3.6'

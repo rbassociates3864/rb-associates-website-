@@ -1,24 +1,37 @@
-footer.footer
-  .container
-    nav.row
-      .col-xs-6.col-md-2
-        h3.footer-title Company
-        ul.nav
-          li= link_to 'About', '/'
-          li= link_to 'Press', '/'
-          li= link_to 'News', '/'
-      .col-xs-6.col-md-2
-        h3.footer-title Contact
-        address
-          strong RB Associates
-          br
-          | 3864 Courtney Street,
-          br
-          | Suite #140
-          br
-          | Bethlehem, PA 18088
-          br
-          a (123) 456-7890
-    
-    .copyright
-      | &#169; RB Associates All Rights Reserved.
+footer
+  .skyline
+  .footer
+    .container
+      nav.row
+        .col-md-3
+          = image_tag 'h-logo-white.svg', class: 'footer-logo'
+        .col-md-3
+          .footer-widget
+            h3.footer-title Company
+            .row
+              .col-md-6
+                ul.nav
+                  li= link_to 'Overview', '/'
+                  li= link_to 'Our Process', '/'
+              .col-md-6
+                ul.nav
+                  li= link_to 'Properties', '/'
+                  li= link_to 'Contact', '/'
+        .col-md-3
+          .footer-widget
+            h3.footer-title Newsletter Subscribe
+            .input-group
+              = input_tag :email, :class => 'form-control', placeholder: 'Enter your email'
+              span.input-group-btn
+                button(type='submit' class='btn btn-primary-alt') Subscribe
+        .col-md-3
+          .footer-widget
+            h3.footer-title Contact
+            ul.nav.footer-contact-info
+              li P: 123-456-7890
+              li 3864 Courtney Street, Suite #140
+              li Bethlehem, PA 18088
+
+      .copyright
+        = image_tag 'h-logo-white.svg', class: 'footer-copyright-logo'
+        div &#169; RB Associates All Rights Reserved.

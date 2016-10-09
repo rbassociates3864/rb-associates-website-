@@ -1,5 +1,9 @@
 body {
   padding-top: 50px;
+
+  @include breakpoint(md) {
+    padding-top: 60px;
+  }
 }
 
 .section {
@@ -8,9 +12,33 @@ body {
   &.gray {
     background: $section-gray-bg;
   }
+
+  @include breakpoint(md) {
+    padding: 8rem 0;
+  }
 }
 
 .section__title {
   margin: 0 0 5rem;
+  text-transform: uppercase;
   @include triangle;
+
+  @include breakpoint(md) {
+    margin: 0 0 6rem;
+  }
+}
+
+.section__subtitle {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0 1.5rem;
+  margin: 0;
+
+  @include breakpoint(md) {
+    font-size: 2rem;
+  }
+}
+
+.btn-primary-alt {
+  @include button-variant($brand-primary, fade-out(#000000, 0.4), $brand-primary);
 }
