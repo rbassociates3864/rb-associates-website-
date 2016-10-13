@@ -4,7 +4,7 @@ page_class: properties_details
 ---
 
 section.big-background
-  / #bgndVideo.player data-property="{videoURL:'http://youtu.be/sLB5v0XsoSw', containment:'.big-background', showYTLogo: false, showControls: false, autoPlay:true, mute:true, startAt:35, opacity:1}"
+  #bgndVideo.player data-property="{videoURL:'https://youtu.be/dGfcDCR_bFk', containment:'.big-background', showYTLogo: false, showControls: false, autoPlay:true, mute:true, startAt:437, opacity:1}"
 
   .container
     .property__details
@@ -16,7 +16,7 @@ section.big-background
         .price $13 S/F
         .availibility
           | Units Available:
-          span.amount 2
+          span.amount 1
 
         .footage 57,000 SF
         
@@ -29,40 +29,90 @@ section.big-background
           h2.section__title
             = image_tag 'chat.svg'
             span Description
-          p The proud home of the Lehigh Valley Animal Hospital. This location is perfectly located on Route 512.
+          p 
+           | Our first installment of this property is complete, the proud home 
+           | of the Lehigh Valley Animal Hospital. Our second building will be 28,000SF. 
+           | We will build to suit spaces 1,800SF and up. Offering 50% split with cooperating brokers. 
+           | Proceed on route 512 from Bethlehem toward Bath. Property is on the left-hand side before Locust Road.
           
       section.section
         .inner
           h2.section__title
             = image_tag 'info.svg'
             span Essential Information
-
-          table.table
-            tbody
-              tr
-                th Rental Rate
-                td Negotiable
-              tr
-                th Total Space Available
-                td 33,722 SF
+            
+          .row
+            .col-md-6
+              table.table
+                tbody
+                  tr
+                    th Rental Rate
+                    td Negotiable
+                  tr
+                    th Total Space Available
+                    td 28,800 SF
+                  tr
+                    th Min. Divisible
+                    td 1,800 SF
+                  tr
+                    th Max. Contiguous
+                    td 10,000 SF
+                  tr
+                    th Property Type
+                    td Industrial
+            .col-md-6
+              table.table
+                tbody
+                  tr
+                    th Property Sub-type
+                    td Flex Space
+                  tr
+                    th Building Size
+                    td 28,800 SF
+                  tr
+                    th Lot Size
+                    td 15.30 AC
+                  tr
+                    th Construction Status
+                    td Under Construction/Proposed
+                  tr
+                    th Build to Suit
+                    td Yes
 
       section.section
         .inner
           h2.section__title
-            = image_tag 'chat.svg'
+            = image_tag 'SpaceAvailable.svg'
             span 1 Space Available
 
           .space
-            h4.space__title Space 1
-
-            table.table
-              tbody
-                tr
-                  th Rental Rate
-                  td Negotiable
-                tr
-                  th Space Type
-                  td Office Building
+            h4.space__title Space Building 1
+            
+            .row
+              .col-md-6
+                table.table
+                  tbody
+                    tr
+                      th Rental Rate
+                      td $13 /SF/Year
+                    tr
+                      th Space Available
+                      td 	28,800 SF
+                    tr
+                      th Min. Divisible
+                      td 1,800 SF
+              .col-md-6
+                table.table
+                  tbody
+                    tr
+                      th Max. Contiguous
+                      td 10,000 SF
+                    tr
+                      th Space Type
+                      td Flex Space
+                    tr
+                      th Lease Type
+                      td NNN
                   
       section.section
         .inner
@@ -71,32 +121,40 @@ section.big-background
             span Photo Gallery
 
           .owl-carousel.owl-theme
-            a.test-popup-link(href='/images/lehigh-valley-animal-hospital.jpg')
-              img(src='/images/lehigh-valley-animal-hospital.jpg')
-            a.test-popup-link(href='/images/lehigh-valley-animal-hospital.jpg')
-              img(src='/images/lehigh-valley-animal-hospital.jpg')
-            a.test-popup-link(href='/images/lehigh-valley-animal-hospital.jpg')
-              img(src='/images/lehigh-valley-animal-hospital.jpg')
+            a.test-popup-link(href='https://rb-associates.imgix.net/locust-manor/locust-manor-1.jpg?w=800')
+              img(src='https://rb-associates.imgix.net/locust-manor/locust-manor-1.jpg?w=400')
+            a.test-popup-link(href='https://rb-associates.imgix.net/locust-manor/locust-manor-2.jpg?w=800')
+              img(src='https://rb-associates.imgix.net/locust-manor/locust-manor-2.jpg?w=400')
+            a.test-popup-link(href='https://rb-associates.imgix.net/locust-manor/locust-manor-3.jpg?w=800')
+              img(src='https://rb-associates.imgix.net/locust-manor/locust-manor-3.jpg?w=400')
+            a.test-popup-link(href='https://rb-associates.imgix.net/locust-manor/locust-manor-4.jpg?w=800')
+              img(src='https://rb-associates.imgix.net/locust-manor/locust-manor-4.jpg?w=400')
+            a.test-popup-link(href='https://rb-associates.imgix.net/locust-manor/locust-manor-5.jpg?w=800')
+              img(src='https://rb-associates.imgix.net/locust-manor/locust-manor-5.jpg?w=400')
+            a.test-popup-link(href='https://rb-associates.imgix.net/locust-manor/locust-manor-6.jpg?w=800')
+              img(src='https://rb-associates.imgix.net/locust-manor/locust-manor-6.jpg?w=400')
+            a.test-popup-link(href='https://rb-associates.imgix.net/locust-manor/locust-manor-7.jpg?w=800')
+              img(src='https://rb-associates.imgix.net/locust-manor/locust-manor-7.jpg?w=400')
+            a.test-popup-link(href='https://rb-associates.imgix.net/locust-manor/locust-manor-8.jpg?w=800')
+              img(src='https://rb-associates.imgix.net/locust-manor/locust-manor-8.jpg?w=400')
+            a.test-popup-link(href='https://rb-associates.imgix.net/locust-manor/locust-manor-9.jpg?w=800')
+              img(src='https://rb-associates.imgix.net/locust-manor/locust-manor-9.jpg?w=400')
+            a.test-popup-link(href='https://rb-associates.imgix.net/locust-manor/locust-manor-10.jpg?w=800')
+              img(src='https://rb-associates.imgix.net/locust-manor/locust-manor-10.jpg?w=400')
+            a.test-popup-link(href='https://rb-associates.imgix.net/locust-manor/locust-manor-11.jpg?w=800')
+              img(src='https://rb-associates.imgix.net/locust-manor/locust-manor-11.jpg?w=400')
+            a.test-popup-link(href='https://rb-associates.imgix.net/locust-manor/locust-manor-12.jpg?w=800')
+              img(src='https://rb-associates.imgix.net/locust-manor/locust-manor-12.jpg?w=400')
+            a.test-popup-link(href='https://rb-associates.imgix.net/locust-manor/locust-manor-13.jpg?w=800')
+              img(src='https://rb-associates.imgix.net/locust-manor/locust-manor-13.jpg?w=400')
     
     .col-md-4
-    
+      = partial 'layouts/partials/contact_form'
+
       section.section
         .inner
-          h4.section__title Contact Agent
+          h4.section__title
+            = image_tag 'Video.svg'
+            span Videos
           
-          .agent
-            .agent__profile
-              .agent__pic
-              .agent__details
-                .agent__details-name Joe Paranee
-                .agent__details-phone 123-456-789
-            .agent__contactForm
-              = form_tag '/contact' do
-                .form-group
-                  = text_field_tag :name, class: 'form-control', placeholder: 'Name'
-                .form-group
-                  = text_field_tag :phone, class: 'form-control', placeholder: 'Phone'
-                .form-group
-                  = email_field_tag :email, class: 'form-control', placeholder: 'Email'
-                .form-group
-                  = text_area_tag :message, class: 'form-control', value: "Hello, I'm interested in #{current_page.data.title}."
+          <iframe width="100%" src="https://www.youtube.com/embed/dGfcDCR_bFk" frameborder="0" allowfullscreen></iframe>

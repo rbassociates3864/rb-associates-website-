@@ -4,7 +4,7 @@
   min-height:250px;
   position:relative;
   overflow:hidden;
-  background: url('http://rb-associates.imgix.net/locust-manor.jpg?h=600') center center no-repeat;
+  background: url('https://rb-associates.imgix.net/locust-manor.jpg?w=1920') center center no-repeat;
   background-size: cover;
 
   @include breakpoint(md) {
@@ -52,6 +52,11 @@
   padding-bottom: 0.5rem;
   font-size: 2rem;
   text-transform: uppercase;
+
+  @include breakpoint(md) {
+    font-size: 2.75rem;
+    padding-bottom: 0.75rem;
+  }
 }
 
 .property__details__specs {
@@ -68,12 +73,16 @@
   .location {
     width: 100%;
     padding-bottom: 1.5rem;
+
+    @include breakpoint(md) {
+      padding-bottom: 1.75rem;
+    }
   }
 
   .price {
     width: 50%;
     font-size: 2rem;
-    color: #ffffff;
+    color: rgb(251, 164, 13);
   }
 
   .availibility {
@@ -87,7 +96,7 @@
       width: 2.125rem;
       height: 2.125rem;
       font-size: 1.25rem;
-      border-radius: 50%;
+      border-radius: 2px;
       background: #222222;
     }
   }
@@ -124,17 +133,18 @@
 
     @include breakpoint(md) {
       flex-direction: column;
+      margin: 0 0 3rem;
       font-size: 2.25rem;
     }
 
     img {
-      height: 2.25rem;
+      width: 2.25rem;
       display: inline-block;
-      margin-right: 0.75rem;
+      margin-right: 1.25rem;
 
       @include breakpoint(md) {
-        height: 4rem;
-        margin: 0 0 0.75rem 0;
+        width: 3.5rem;
+        margin: 0 0 1rem;
       }
     }
   }
@@ -146,7 +156,7 @@
 
 .space {
   padding: 1rem;
-  border: 1px solid $brand-primary;
+  border: 1px solid darken($table-border-color, 5%);
 
   .table > tbody > tr > th {
     padding-left: 0;
@@ -187,4 +197,47 @@
   .col-md-4 {
     margin-bottom: 2rem;
   }
+}
+
+.agent__profile {
+  display: flex;
+  align-items: center;
+
+  @include breakpoint(md) {
+    justify-content: center;
+  }
+}
+
+.agent__pic {
+  img {
+    width: 10rem;
+    border: 2px solid $gray-light;
+    border-radius: 50%;
+  }
+}
+
+.agent__details {
+  padding-left: 2rem;
+}
+
+.agent__details-name {
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+.agent__details-phone {
+  a {
+    color: $text-color;
+    @include plain-link($text-color);
+  }
+}
+
+.agent__contact-form {
+  margin-top: 2rem;
+}
+
+.agent__contact-form__submit {
+  width: 100%;
+  padding: 0.75rem 0;
+  text-transform: uppercase;
 }
