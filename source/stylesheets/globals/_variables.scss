@@ -8,7 +8,9 @@ $rb-blue:         #3FA2F7;
 $blue-text:       #297FCA;
 $section-gray-bg: #f7f7f7;
 $brand-primary:   $rb-blue;
+$brand-success:   #77c720;
 $footer-color:    #919496;
+$gray-base:       #181818;
 
 //== Components
 //
@@ -22,9 +24,9 @@ $border-radius-small:       1px !default;
 //
 //##
 
+$navbar-height:                   55px !default;
 $navbar-default-color:            #333333;
 $navbar-default-bg:               fade-out(#ffffff, 0.05);
-// $navbar-default-bg:               fade-out(#52ff00, 0.05);
 
 $navbar-default-link-color:       #333333;
 $navbar-default-link-hover-color: #111111;
@@ -36,3 +38,11 @@ $grid-float-breakpoint: 992px !default;
 $navbar-default-toggle-hover-bg:           #ffffff !default;
 $navbar-default-toggle-icon-bar-bg:        #333333 !default;
 $navbar-default-toggle-border-color:       #ffffff !default;
+
+
+//== Labels
+//
+//##
+
+//** Default label background color
+$label-default-bg:            #444 !default;

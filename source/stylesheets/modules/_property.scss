@@ -1,19 +1,228 @@
+// INDEX
+
+.properties__container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0 1rem;
+
+  @include breakpoint(md) {
+    flex-direction: row;
+    padding: 0;
+  }
+}
+
+.properties__title {
+  margin: 2.25rem 0 1.5rem;
+  padding: 0;
+  font-size: 3rem;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.properties__list {
+  padding-top: 60px;
+  width: 100%;
+
+  @include breakpoint(md) {
+    width: 40%;
+    max-width: 50rem;
+    background: #ffffff;
+    overflow-y: scroll;
+  }
+}
+
+.properties__title {
+  @include breakpoint(md) {
+    display: none;
+  }
+}
+
+.properties__map {
+  display: none;
+  position: relative;
+  width: 60%;
+
+  @include breakpoint(md) {
+    display: block;
+    width: 60%;
+    flex-grow: 1;
+  }
+}
+
+.angular-google-map-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.property-cards {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(sm) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.property-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+  margin: 0 0 1rem;
+  background: #ffffff;
+
+  @include breakpoint(sm) {
+    width: 49%;
+
+    &:nth-child(odd) {
+      margin-right: 2%;
+    }
+  }
+
+  @include breakpoint(md) {
+    width: 100%;
+    flex-direction: row;
+    margin: 0;
+    border-top: 1px solid $gray-lighter;
+
+    &:nth-child(odd) {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid $gray-lighter;
+    }
+  }
+}
+
+.property-card__img {
+  width: 100%;
+  position: relative;
+
+  @include breakpoint(md) {
+    width: 13rem;
+  }
+
+  .label {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.5rem 0.75rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 1;
+
+    @include breakpoint(md) {
+      display: none;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.property-card__details {
+  position: relative;
+  flex-grow: 1;
+
+  @include breakpoint(md) {
+    padding-left: 1rem;
+  }
+
+  .label-wrap {
+    display: none;
+    line-height: 1;
+
+    @include breakpoint(md) {
+      display: block;
+    }
+  }
+
+}
+
+.property-card__title {
+  margin: 0;
+  padding: 1rem 0 0.75rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+
+  &,
+  a {
+    color: $gray-dark;
+  }
+
+  a {
+    @include plain-link($brand-primary);
+  }
+}
+
+.property-card__address {
+  margin: 0;
+  font-size: 1.25rem;
+  color: $gray-light;
+}
+
+.property-card__btn {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  font-size: 1.25rem;
+
+  @include breakpoint(md) {
+    top: 0;
+  }
+
+  i {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+}
+
+.map__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+
+  a {
+    color: $gray-dark;
+  }
+}
+
+// SHOW
+
 .big-background {
   z-index:550;
   height: 100%;
   min-height:250px;
+  height: 250px;
   position:relative;
   overflow:hidden;
-  background: url('https://rb-associates.imgix.net/locust-manor.jpg?w=1920') center center no-repeat;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
 
   @include breakpoint(md) {
     display: flex;
+    height: 400px;
     min-height: 400px;
   }
 
   @include breakpoint(lg) {
     min-height: 450px;
+    height: 450px;
   }
 
   .mbYTP_wrapper {
@@ -28,22 +237,54 @@
     position: static !important;
 
     @include breakpoint(md) {
+      z-index: 0;
       position: relative !important;
     }
+  }
+}
+
+.big-background {
+  &.property_25th-street-easton { background-image: url('https://rb-associates.imgix.net/25th-street-easton.jpg?w=1920') }
+  &.property_268-brodhead { background-image: url('https://rb-associates.imgix.net/268-brodhead.jpg?w=1920') }
+  &.property_locust-manor{ background-image: url('https://rb-associates.imgix.net/locust-manor.jpg?w=1920') }
+  &.courtney-1 { background-image: url('https://rb-associates.imgix.net/courtney-1.jpg?w=1920') }
+  &.courtney-2 { background-image: url('https://rb-associates.imgix.net/courtney-2.jpg?w=1920') }
+  &.courtney-3 { background-image: url('https://rb-associates.imgix.net/courtney-3.jpg?w=1920') }
+  &.park-plaza { background-image: url('https://rb-associates.imgix.net/park-plaza.jpg?w=1920') }
+  &.hecktown-business-park { background-image: url('https://rb-associates.imgix.net/hecktown-business-park.jpg?w=1920') }
+  &.forks-landing { background-image: url('https://rb-associates.imgix.net/forks-landing.jpg?h=400') }
+  &.lafayette-fairfield {
+    @include breakpoint(md) {
+      .container {
+        display: flex;
+        position: static !important;
+        align-items: flex-end;
+      }
+
+      .property__details {
+        position: relative !important;
+      }
+    }
+
   }
 }
 
 .property__details {
   position: absolute;
   left: 0;
-  bottom: 3rem;
-  padding: 1rem;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem 1.25rem;
   display: inline-block;
   color: #ffffff;
   background: fade-out(#000000, 0.4);
 
   @include breakpoint(md) {
+    bottom: 3rem;
     left: 15px;
+    width: auto;
+    padding: 1rem 2rem;
+    z-index: 2000;
   }
 }
 
@@ -54,24 +295,21 @@
   text-transform: uppercase;
 
   @include breakpoint(md) {
-    font-size: 2.75rem;
+    font-size: 2.5rem;
     padding-bottom: 0.75rem;
   }
 }
 
 .property__details__specs {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   line-height: 1;
 
   .fa {
     display: inline-block;
     margin-right: 0.75rem;
+    color: $brand-primary;
   }
 
   .location {
-    width: 100%;
     padding-bottom: 1.5rem;
 
     @include breakpoint(md) {
@@ -80,13 +318,15 @@
   }
 
   .price {
-    width: 50%;
-    font-size: 2rem;
-    color: rgb(251, 164, 13);
+    padding-right: 1.5rem;
+    font-size: 1.75rem;
+    color: #fff;
   }
 
   .availibility {
-    width: 50%;
+    display: flex;
+    align-items: center;
+    line-height: 1;
 
     .amount {
       margin-left: 0.75rem;
@@ -97,13 +337,18 @@
       height: 2.125rem;
       font-size: 1.25rem;
       border-radius: 2px;
-      background: #222222;
+      background: $brand-primary;
     }
   }
 
   .footage {
     display: none;
   }
+}
+
+.property__details__price-availibility {
+  display: flex;
+  align-items: center;
 }
 
 .properties_details {
@@ -154,9 +399,36 @@
   }
 }
 
+.combined {
+  position: relative;
+  margin-bottom: 3.25rem;
+  padding: 2rem 1.75rem 1.75rem;
+  border: 1px solid darken($table-border-color, 5%);
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.combined__title {
+  display: inline-block;
+  position: absolute;
+  top: -11px;
+  left: 1.5rem;
+  padding: 0 0.5rem;
+  background: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
 .space {
+  margin-bottom: 2rem;
   padding: 1rem;
   border: 1px solid darken($table-border-color, 5%);
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 
   .table > tbody > tr > th {
     padding-left: 0;
@@ -166,37 +438,6 @@
 .space__title {
   margin: 0 0 1rem;
   color: $brand-primary;
-}
-
-.property-card {
-  display: block;
-  border: 1px solid $gray-lighter;
-  border-radius: 2px;
-  @include plain-link();
-
-  &:hover {
-    border-color: $brand-primary;
-  }
-}
-
-.property-card-img {
-  width: 100%;
-  max-height: 20rem;
-  border-radius: 2px 2px 0 0;
-}
-
-.property-card-title {
-  margin: 0;
-  padding: 1rem 0;
-  font-size: 1.75rem;
-  text-align: center;
-  color: $gray-darker;
-}
-
-.property-cards {
-  .col-md-4 {
-    margin-bottom: 2rem;
-  }
 }
 
 .agent__profile {

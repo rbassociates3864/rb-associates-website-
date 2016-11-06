@@ -1,0 +1,172 @@
+---
+title: 268 Brodhead Rd, Bethlehem, PA 18017
+page_class: properties_details
+---
+
+section.big-background.property_268-brodhead
+  #bgndVideo.player data-property="{videoURL:'https://youtu.be/sLB5v0XsoSw', containment:'.big-background', showYTLogo: false, showControls: false, autoPlay:true, mute:true, startAt:37, opacity:1}"
+
+  .container
+    .property__details
+      h1.property__details__title 268 Brodhead Rd
+      .property__details__specs
+        .location
+          i.fa.fa-map-marker
+          | Bethlehem | PA
+        .property__details__price-availibility
+          .price $7-$14 /SF/Year
+          .availibility
+            | Spaces Available:
+            span.amount 1
+
+.container
+  .row
+    .col-md-8
+
+      section.section
+        .inner
+          h2.section__title
+            = image_tag 'chat.svg'
+            span Description
+          p This incredible building features a fantastic layout and distinct architecture. The interior layout is extremely well thought out with office in the front with assemble/warehouse in the back. The site is currently undergoing all new mechanicals and roofing and a 20 sq ft warehouse addition.
+          p Located in the center of the thriving Lehigh Valley Industrial Park, near FedEx.
+
+      section.section
+        .inner
+          h2.section__title
+            = image_tag 'info.svg'
+            span Essential Information
+
+          h3 Lot
+
+          .row
+            .col-md-6
+              table.table
+                tbody
+                  tr
+                    th Price
+                    td $4,300,000
+                  tr
+                    th Building Size
+                    td 33,722 SF
+                  tr
+                    th Price/SF
+                    td $127.51
+                  tr
+                    th Property Type
+                    td Industrial
+                  tr
+                    th Property Sub-type
+                    td Flex Space
+                  tr
+                    th Property Use Type
+                    td Vacant/Owner-User
+            .col-md-6
+              table.table
+                tbody
+                  tr
+                    th No. Stories
+                    td 1
+                  tr
+                    th Year Built
+                    td 1994
+                  tr
+                    th Clear Ceiling Height
+                    td 18 FT
+                  tr
+                    th APN / Parcel ID
+                    td M6-15-58-0214
+                  tr
+                    th Parking Ratio
+                    td 4.05 / 1,000 SF
+                  tr
+                    th Features
+                    td Trailer Parking / Sprinklers
+                  tr
+                    th Lot Size
+                    td 6.15 AC
+
+          h3 Utilities/Area
+
+          .row
+            .col-md-6
+              table.table
+                tbody
+                  tr
+                    th Gas Source
+                    td Public
+                  tr
+                    th Electric Source
+                    td Public
+                  tr
+                    th Water Source
+                    td Public
+                  tr
+                    th Sewer Source
+                    td Public
+            .col-md-6
+              table.table
+                tbody
+                  tr
+                    th Zoning Code
+                    td
+                      | Pibd-Planned
+                      br
+                      | Industrial/Business Park
+                  tr
+                    th Road Type
+                    td Paved
+                  tr
+                    th Topography
+                    td Level
+
+      section.section
+        .inner
+          h2.section__title
+            = image_tag 'SpaceAvailable.svg'
+            span 1 Space Available
+
+          .space
+            h4.space__title Space 1
+
+            .row
+              .col-md-6
+                table.table
+                  tbody
+                    tr
+                      th Rental Rate
+                      td $7-$14 /SF/Year
+                    tr
+                      th Space Available
+                      td 33,722 SF
+              .col-md-6
+                table.table
+                  tbody
+                    tr
+                      th Space Type
+                      td Office Building
+                    tr
+                      th Lease Type
+                      td NNN
+
+      section.section
+        .inner
+          h2.section__title
+            = image_tag 'camera.svg'
+            span Photo Gallery
+
+          .owl-carousel.owl-theme
+            - 11.times do |idx|
+              a.test-popup-link(href="https://rb-associates.imgix.net/268-brodhead/268-brodhead-#{idx+1}.jpg?w=800")
+                img(src="https://rb-associates.imgix.net/268-brodhead/268-brodhead-#{idx+1}.jpg?w=400")
+
+    .col-md-4
+      = partial 'layouts/partials/contact_form'
+
+      section.section
+        .inner
+          h4.section__title
+            = image_tag 'Video.svg'
+            span Videos
+
+          <iframe width="100%" src="https://www.youtube.com/embed/sLB5v0XsoSw" frameborder="0" allowfullscreen></iframe>

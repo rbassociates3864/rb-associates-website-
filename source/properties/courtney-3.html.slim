@@ -1,28 +1,28 @@
 ---
-title: Lafayette Street & West Fairfield Ave, Easton, PA 18042
+title: Courtney III - 2550 Brodhead Rd, Bethlehem, PA 18017
 page_class: properties_details
 ---
 
-section.big-background.lafayette-fairfield(data-ng-controller='PropertiesShowCtrl as vm')
+section.big-background.courtney-3
+  #bgndVideo.player data-property="{videoURL:'https://youtu.be/TQOPeaS_Ebw', containment:'.big-background', showYTLogo: false, showControls: false, autoPlay:true, mute:true, startAt:64, opacity:1}"
+
   .container
-    ui-gmap-google-map(center='vm.map.center' zoom='vm.map.zoom' ng-init=" vm.setProperty('lafayette') ")
-      ui-gmap-markers(models='vm.map.markers' coords="'coords'")
     .property__details
-      h1.property__details__title College Hill
+      h1.property__details__title Courtney III
       .property__details__specs
         .location
           i.fa.fa-map-marker
-          | Easton | PA
+          | Bethlehem | PA
         .property__details__price-availibility
-          .price Price Not Disclosed
+          .price $1 /SF/Year
           .availibility
-            | Lots Available:
+            | Spaces Available:
             span.amount 1
-        
+
 .container
   .row
     .col-md-8
-    
+
       section.section
         .inner
           h2.section__title
@@ -31,36 +31,28 @@ section.big-background.lafayette-fairfield(data-ng-controller='PropertiesShowCtr
           p Building features fantastic Architecture that incorporates a dramatic front entrance showcased in Rose colored glass. Fantastic location near rt 22 - 78 - 191 and 512.
           p Located on the north east side of the Bethlehem Industrial park. This fantastic second floor suite can be built to suit from 1500 sq ft to 3373 sq ft. This space is offered at $ 12.00 dollars a sq ft NNN.
           p From route 22 exit at 191 exit proceed north make right on to Broadhead Rd continue less than a half mile building on the left.
-          
+
       section.section
         .inner
           h2.section__title
             = image_tag 'info.svg'
             span Essential Information
-            
+
+          h3 Lot
+
           .row
             .col-md-6
               table.table
                 tbody
                   tr
-                    th Rental Rate
-                    td $1 /SF/Month
-                  tr
-                    th Total Space Available
-                    td 1,500 SF
-                  tr
-                    th Max. Contiguous
-                    td 3,373 SF
-                  tr
                     th Property Type
-                    td Office
-                  
-            .col-md-6
-              table.table
-                tbody
+                    td Industrial
                   tr
                     th Property Sub-type
                     td Office Building
+            .col-md-6
+              table.table
+                tbody
                   tr
                     th Building Size
                     td 53,760 SF
@@ -69,8 +61,42 @@ section.big-background.lafayette-fairfield(data-ng-controller='PropertiesShowCtr
                     td A
                   tr
                     th Lot Size
-                    td 171,626 SF
-                    
+                    td 3.94 AC
+
+          h3 Utilities/Area
+
+          .row
+            .col-md-6
+              table.table
+                tbody
+                  tr
+                    th Gas Source
+                    td Public
+                  tr
+                    th Electric Source
+                    td Public
+                  tr
+                    th Water Source
+                    td Public
+                  tr
+                    th Sewer Source
+                    td Public
+            .col-md-6
+              table.table
+                tbody
+                  tr
+                    th Zoning Code
+                    td
+                      | Li-Light Industrial/Office
+                      br
+                      | Campus
+                  tr
+                    th Road Type
+                    td Paved
+                  tr
+                    th Topography
+                    td Level
+
       section.section
         .inner
           h2.section__title
@@ -79,7 +105,7 @@ section.big-background.lafayette-fairfield(data-ng-controller='PropertiesShowCtr
 
           .space
             h4.space__title Space 201/202
-            
+
             .row
               .col-md-6
                 table.table
@@ -102,7 +128,7 @@ section.big-background.lafayette-fairfield(data-ng-controller='PropertiesShowCtr
                     tr
                       th Lease Type
                       td NNN
-                  
+
       section.section
         .inner
           h2.section__title
@@ -110,9 +136,17 @@ section.big-background.lafayette-fairfield(data-ng-controller='PropertiesShowCtr
             span Photo Gallery
 
           .owl-carousel.owl-theme
-            - 1.times do |idx|
-              a.test-popup-link(href="https://rb-associates.imgix.net/lafayette-fairfield/lafayette-fairfield-#{idx+1}.jpg?w=800")
-                img(src="https://rb-associates.imgix.net/lafayette-fairfield/lafayette-fairfield-#{idx+1}.jpg?w=400")
-    
+            - 6.times do |idx|
+              a.test-popup-link(href="https://rb-associates.imgix.net/courtney-3/courtney-3-#{idx+1}.jpg?w=800")
+                img(src="https://rb-associates.imgix.net/courtney-3/courtney-3-#{idx+1}.jpg?w=400")
+
     .col-md-4
       = partial 'layouts/partials/contact_form'
+
+      section.section
+        .inner
+          h4.section__title
+            = image_tag 'Video.svg'
+            span Videos
+
+          <iframe width="100%" src="https://www.youtube.com/embed/TQOPeaS_Ebw" frameborder="0" allowfullscreen></iframe>

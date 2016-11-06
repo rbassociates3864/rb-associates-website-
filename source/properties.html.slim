@@ -1,73 +1,34 @@
 ---
   title: Properties
+  hide_footer: true
 ---
 
-section.section
-  .container
-    h1.section__title Properties
-
-    .row.property-cards
-
-      .col-md-4
-        a.property-card(href='/properties/courtney-I/')
-          .property-card-header
-            img.property-card-img(src='https://rb-associates.imgix.net/courtney-1.jpg?w=600')
-          .property-card-footer
-            h2.property-card-title Courtney I
-            .property-card-desc
-
-      .col-md-4
-        a.property-card(href='/properties/courtney-II/')
-          .property-card-header
-            img.property-card-img(src='https://rb-associates.imgix.net/courtney-2.jpg?w=600')
-          .property-card-footer
-            h2.property-card-title Courtney II
-            .property-card-desc
-
-      .col-md-4
-        a.property-card(href='/properties/courtney-III/')
-          .property-card-header
-            img.property-card-img(src='https://rb-associates.imgix.net/courtney-3.jpg?w=600')
-          .property-card-footer
-            h2.property-card-title Courtney III
-            .property-card-desc
-
-      .col-md-4
-        a.property-card(href='/properties/268-brodhead/')
-          .property-card-header
-            img.property-card-img(src='https://rb-associates.imgix.net/268-brodhead.jpg?w=600')
-          .property-card-footer
-            h2.property-card-title 268 Brodhead
-            .property-card-desc
-
-      .col-md-4
-        a.property-card(href='/properties/park-plaza/')
-          .property-card-header
-            img.property-card-img(src='https://rb-associates.imgix.net/park-plaza.jpg?w=600')
-          .property-card-footer
-            h2.property-card-title Park Plaza
-            .property-card-desc
-
-      .col-md-4
-        a.property-card(href='/properties/locust-manor/')
-          .property-card-header
-            img.property-card-img(src='https://rb-associates.imgix.net/locust-manor.jpg?w=600')
-          .property-card-footer
-            h2.property-card-title Locust Manor
-            .property-card-desc
-
-      .col-md-4
-        a.property-card(href='/properties/25th-street-easton/')
-          .property-card-header
-            img.property-card-img(src='https://rb-associates.imgix.net/25th-street-easton.jpg?w=600')
-          .property-card-footer
-            h2.property-card-title 25th Street Easton
-            .property-card-desc
-
-      .col-md-4
-        a.property-card(href='/properties/hecktown-business-park/')
-          .property-card-header
-            img.property-card-img(src='https://rb-associates.imgix.net/hecktown-business-park.jpg?w=600')
-          .property-card-footer
-            h2.property-card-title Hecktown Business Park
-            .property-card-desc
+.properties__container(data-ng-controller='PropertiesIndexCtrl as vm')
+  .properties__list
+    h1.properties__title Our Properties
+    ul.property-cards
+      - data.properties.each do |property|
+        li.property-card
+          .property-card__img
+            span.label.label-default= property.label_type
+            = image_tag "https://rb-associates.imgix.net/#{property.image}?w=600"
+          .property-card__details
+            .nap
+              .label-wrap
+                span.label.label-default= property.label_type
+              h2.property-card__title
+                = link_to property.name, "/properties/#{property.url}/"
+              address.property-card__address= property.address
+            a.btn.btn-default.property-card__btn(href="/properties/#{property.url}/" title='View Property')
+              | Details
+              i.fa.fa-angle-right
+  .properties__map
+    ui-gmap-google-map(center='vm.map.center' zoom='vm.map.zoom')
+      ui-gmap-window(show='vm.map.window.show' coords='vm.map.window.model.coords' options='vm.map.window.options')
+        .inner
+          h3.map__title
+            a(ng-href='/properties/{{vm.map.window.model.url}}/')
+              | {{ vm.map.window.model.name }}
+          address.property-card__address
+            | {{ vm.map.window.model.address }}
+      ui-gmap-markers(models='vm.map.markers' coords="'coords'" events='vm.map.markersEvents')

@@ -1,22 +1,23 @@
 ---
-title: 750 S 25th St, Easton, PA 18042
+title: Courtney I - 3894 Courtney St, Bethlehem, PA 18017
 page_class: properties_details
 ---
 
-section.big-background.property_25th-street-easton
+section.big-background.courtney-1
+  #bgndVideo.player data-property="{videoURL:'https://youtu.be/tw7kcOnHjJ0', containment:'.big-background', showYTLogo: false, showControls: false, autoPlay:true, mute:true, startAt:48, opacity:1}"
 
   .container
     .property__details
-      h1.property__details__title 750 S 25th St
+      h1.property__details__title Courtney I
       .property__details__specs
         .location
           i.fa.fa-map-marker
-          | Easton | PA
+          | Bethlehem | PA
         .property__details__price-availibility
-          .price $13 S/F
+          .price $13 /SF/Year
           .availibility
             | Units Available:
-            span.amount 1
+            span.amount 0
 
 .container
   .row
@@ -27,10 +28,8 @@ section.big-background.property_25th-street-easton
           h2.section__title
             = image_tag 'chat.svg'
             span Description
-          p Here is a fantastic location that is in a very high traffic area on 25th street in Easton, located directly across from the Home Depot and Giant.
-          p This property is located directly across from the Home Depot and Giant and would be perfect for a number of retail uses.
-          p Location is currently being used as a bicycle shop and is a brand new turn-key fit out.
-          p This premier location is next to Eyeland and has great access to many major highways including 78 , 22 , 33 and also downtown Easton.
+          p Here is a gorgeous appointed suite that is currently being used a dental office. This 3 bathroom suite will be offered unfurnished but it will be in turn key condition for any type of office or practice.
+          p Suite 105 is to the left when you pull in parking lot.
 
       section.section
         .inner
@@ -49,21 +48,24 @@ section.big-background.property_25th-street-easton
                     td $13 /SF/Year
                   tr
                     th Property Type
-                    td Retail
+                    td Office
                   tr
                     th Property Sub-type
-                    td Strip Center
+                    td Office Building
             .col-md-6
               table.table
                 tbody
                   tr
-                    th Gross Leasable Area
-                    td 7,377 SQ
+                    th Building Size
+                    td 51,260 SF
+                  tr
+                    th Building Class
+                    td A
                   tr
                     th Lot Size
-                    td 0.32 AC
+                    td 4.84 AC
 
-          h3 Utilites/Area
+          h3 Utilities/Area
 
           .row
             .col-md-6
@@ -86,7 +88,7 @@ section.big-background.property_25th-street-easton
                 tbody
                   tr
                     th Zoning Code
-                    td C-1-Local Commercial
+                    td P1BD
                   tr
                     th Road Type
                     td Paved
@@ -97,34 +99,21 @@ section.big-background.property_25th-street-easton
       section.section
         .inner
           h2.section__title
-            = image_tag 'SpaceAvailable.svg'
-            span 1 Space Available
+            = image_tag 'camera.svg'
+            span Photo Gallery
 
-          .space
-            h4.space__title Space 1
-
-            .row
-              .col-md-6
-                table.table
-                  tbody
-                    tr
-                      th Rental Rate
-                      td $13 /SF/Year
-                    tr
-                      th Space Available
-                      td 	1,160 SF
-                    tr
-                      th Space Type
-                      td Strip Center
-              .col-md-6
-                table.table
-                  tbody
-                    tr
-                      th Lease Type
-                      td NNN
-                    tr
-                      th Date Available
-                      td May 2016
+          .owl-carousel.owl-theme
+            - 7.times do |idx|
+              a.test-popup-link(href="https://rb-associates.imgix.net/courtney-1/courtney-1-#{idx+1}.jpg?w=800")
+                img(src="https://rb-associates.imgix.net/courtney-1/courtney-1-#{idx+1}.jpg?w=400")
 
     .col-md-4
       = partial 'layouts/partials/contact_form'
+
+      section.section
+        .inner
+          h4.section__title
+            = image_tag 'Video.svg'
+            span Videos
+
+          <iframe width="100%" src="https://www.youtube.com/embed/tw7kcOnHjJ0" frameborder="0" allowfullscreen></iframe>

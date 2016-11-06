@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html data-ng-app='app'>
   <head>
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
@@ -49,6 +49,10 @@
 
     <%= yield %>
 
-    <%= partial 'layouts/footer' %>
+    <% unless current_page.data.hide_footer %>
+      <%= partial 'layouts/footer' %>
+    <% end %>
+
+    <script async='' defer='' src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAR2oIlybRzb1TK5NQCMXFfQD57p2bODI"></script>
   </body>
 </html>

@@ -1,0 +1,81 @@
+-
+  name: 750 S 25th St
+  lat: 40.679904
+  long: -75.246647
+  image: 25th-street-easton.jpg
+  url: 25th-street-easton
+  label_type: lease
+  address: 750 S 25th St, Easton, PA 18042
+-
+  name: 268 BRODHEAD ROAD
+  lat: 40.6772769
+  long: -75.378889
+  image: 268-brodhead.jpg
+  url: 268-brodhead
+  label_type: lease/sale
+  address: 268 Brodhead Rd, Bethlehem, PA 18017
+-
+  name: Courtney I
+  lat: 40.671674
+  long: -75.3735891
+  image: courtney-1.jpg
+  url: courtney-1
+  label_type: lease
+  address: 3894 Courtney St, Bethlehem, PA 18017
+-
+  name: Courtney II
+  lat: 40.670299
+  long: -75.3744074
+  image: courtney-2.jpg
+  url: courtney-2
+  label_type: lease
+  address: 3864 Courtney St, Bethlehem, PA 18017
+-
+  name: Courtney III
+  lat: 40.6785167
+  long: -75.35736279999999
+  image: courtney-3.jpg
+  url: courtney-3
+  label_type: lease
+  address: 2550 Brodhead Rd, Bethlehem, PA 18017
+-
+  name: Park Plaza
+  lat: 40.71628159999999
+  long: -75.2230883
+  image: park-plaza.jpg
+  url: park-plaza
+  label_type: lease
+  address: 1800 Sullivan Trail, Easton, PA 18040
+-
+  name: Locust Manor
+  lat: 40.6957352
+  long: -75.39227579999999
+  image: locust-manor.jpg
+  url: locust-manor
+  label_type: lease/sale
+  address: 512 and Locust, Bethlehem, PA 18017
+-
+  name: Hecktown Business Park
+  lat: 40.6918326
+  long: -75.2848913
+  image: hecktown-business-park.jpg
+  url: hecktown-business-park
+  label_type: sale
+  address: 750 S 25th St, Easton, PA 18042
+-
+  name: Forks Landing
+  lat: 40.72934
+  long: -75.2303829
+  image: forks-landing.jpg
+  url: forks-landing
+  label_type: sale
+  address: Sullivan Trail, Forks Township, PA 18040
+-
+  id: lafayette
+  name: Lafayette & West Fairfield
+  lat: 40.7055188
+  long: -75.2142216
+  image: lafayette-fairfield.jpg
+  url: lafayette-street-and-west-fairfield-avenue
+  label_type: sale
+  address: Lafayette St. & W. Fairfield Ave, Easton, PA 18042

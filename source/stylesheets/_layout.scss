@@ -8,13 +8,15 @@
 
 .navbar-fixed-top {
   border: 0;
+  border-bottom: 1px solid #f1f1f1;
+  box-shadow: 0 2px 1px -1px #f6f6f6;
 }
 .navbar-brand {
   position: relative;
   padding: 1.25rem 15px 0;
 
   img {
-    height: 2.5rem;
+    height: 2.75rem;
   }
 
   @include breakpoint(md) {
@@ -37,7 +39,6 @@
 
   > li > a {
     text-transform: uppercase;
-    letter-spacing: 0.05rem;
 
     @include breakpoint(md) {
       padding: 20px 15px;
@@ -51,3 +52,8 @@
     float: right;
   }
 }
+
+// .navbar-collapse {
+//   display: flex;
+//   flex-direction: column;
+// }

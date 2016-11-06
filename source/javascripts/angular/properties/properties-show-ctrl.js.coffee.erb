@@ -1,0 +1,46 @@
+do ->
+  'use strict'
+
+  PropertiesShowCtrl = ->
+    ctrl = @
+
+    ctrl.properties = JSON.parse '<%= data.properties.to_json %>'
+
+    ctrl.map =
+      center:
+        latitude: 40.7059511
+        longitude: -75.3028006
+      zoom: 15
+      markers: []
+      markersEvents:
+        click: (marker, eventName, model, args) ->
+          ctrl.map.window.model = model
+          ctrl.map.window.show = true
+      window:
+        marker: {}
+        show: false
+        closeClick: ->
+          @show = false
+        options: {
+          pixelOffset: new google.maps.Size(0, -35, 'px', 'px')
+        }
+
+    ctrl.setProperty = (id) ->
+      fetchedProperties = JSON.parse '<%= data.properties.to_json %>'
+      return unless currentProperty = _.find(fetchedProperties, id: id)
+
+      ctrl.map.center.latitude  = currentProperty.lat
+      ctrl.map.center.longitude = currentProperty.long
+
+      ctrl.map.markers = [
+        id: currentProperty.id
+        coords:
+          latitude: currentProperty.lat
+          longitude: currentProperty.long
+      ]
+
+    return
+
+  angular
+    .module('app')
+    .controller('PropertiesShowCtrl', PropertiesShowCtrl)

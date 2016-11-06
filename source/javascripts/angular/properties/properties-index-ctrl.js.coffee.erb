@@ -1,0 +1,50 @@
+do ->
+  'use strict'
+
+  PropertiesIndexCtrl = ->
+    ctrl = @
+
+    ctrl.properties = JSON.parse '<%= data.properties.to_json %>'
+
+    ctrl.map =
+      center:
+        latitude: 40.7059511
+        longitude: -75.3028006
+      zoom: 12
+      markers: []
+      markersEvents:
+        click: (marker, eventName, model, args) ->
+          ctrl.map.window.model = model
+          ctrl.map.window.show = true
+      window:
+        marker: {}
+        show: false
+        closeClick: ->
+          @show = false
+        options: {
+          pixelOffset: new google.maps.Size(0, -35, 'px', 'px')
+        }
+
+    ctrl.init = ->
+      fetchedProperties = JSON.parse '<%= data.properties.to_json %>'
+
+      ctrl.map.markers = _.tap [], (properties) ->
+        angular.forEach fetchedProperties, (p, idx) ->
+          property =
+            id: idx
+            coords:
+              latitude: p.lat
+              longitude: p.long
+            name: p.name
+            address: p.address
+            url: p.url
+          properties.push(property)
+
+
+    ctrl.init()
+
+    return
+
+  angular
+    .module('app')
+    .controller('PropertiesIndexCtrl', PropertiesIndexCtrl)

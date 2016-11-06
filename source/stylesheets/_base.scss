@@ -1,42 +1,22 @@
+html,
 body {
-  padding-top: 50px;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  padding-top: $navbar-height;
 
   @include breakpoint(md) {
     padding-top: 60px;
   }
 }
 
-.section {
-  padding: 6rem 0;
-
-  &.gray {
-    background: $section-gray-bg;
-  }
-
-  @include breakpoint(md) {
-    padding: 8rem 0;
-  }
-}
-
-.section__title {
-  margin: 0 0 5rem;
-  text-transform: uppercase;
-  @include triangle;
-
-  @include breakpoint(md) {
-    margin: 0 0 6rem;
-  }
-}
-
-.section__subtitle {
-  text-align: center;
-  font-size: 1.5rem;
-  padding: 0 1.5rem;
-  margin: 0;
-
-  @include breakpoint(md) {
-    font-size: 2rem;
-  }
+body.properties_index {
+  padding: 0;
+  background: #f1f1f1;
 }
 
 .btn-primary-alt {
