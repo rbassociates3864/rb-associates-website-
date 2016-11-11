@@ -3,16 +3,13 @@
   text-align: center;
 
   &:after {
-    content:'';
+    content: "\f078";
+    font: 2rem/1 'fontawesome';
     position: absolute;
-    top: 110%;
+    bottom: -3rem;
     left: 50%;
-    margin-left: -15px;
-    width: 0;
-    height: 0;
-    border-top: solid 15px $rb-blue;
-    border-left: solid 15px transparent;
-    border-right: solid 15px transparent;
+    margin-left: -10px;
+    color: $rb-red;
   }
 }
 

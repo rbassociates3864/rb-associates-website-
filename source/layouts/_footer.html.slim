@@ -1,37 +1,43 @@
-footer
-  .skyline
-  .footer
-    .container
-      nav.row
-        .col-md-3
-          = image_tag 'h-logo-white.svg', class: 'footer-logo'
-        .col-md-3
+footer.footer
+  .container
+    nav.row
+      .col-sm-8.col-md-7.col-md-offset-1.col-sm-push-4
+        .footer-widgets
           .footer-widget
             h3.footer-title Company
-            .row
-              .col-md-6
-                ul.nav
-                  li= link_to 'Overview', '/'
-                  li= link_to 'Our Process', '/'
-              .col-md-6
-                ul.nav
-                  li= link_to 'Properties', '/'
-                  li= link_to 'Contact', '/'
-        .col-md-3
+            ul.nav
+              li= link_to 'Home', '/'
+              li= link_to 'Properties', '/'
+              li= link_to 'Contact', '/'
           .footer-widget
-            h3.footer-title Newsletter Subscribe
-            .input-group
-              = input_tag :email, :class => 'form-control', placeholder: 'Enter your email'
-              span.input-group-btn
-                button(type='submit' class='btn btn-primary-alt') Subscribe
-        .col-md-3
+            h3.footer-title Connect
+            ul.nav
+              li= link_to 'Facebook', '/'
+              li= link_to 'LinkedIn', '/'
           .footer-widget
             h3.footer-title Contact
             ul.nav.footer-contact-info
-              li P: 123-456-7890
-              li 3864 Courtney Street, Suite #140
-              li Bethlehem, PA 18088
+              li
+                div(itemscope="" itemtype="https://schema.org/LocalBusiness")
+                  div
+                    a(href="tel:+14842250994" itemprop="telephone") 484-225-0994
+                  div(itemprop="name") RB Associates
+                  div(itemprop="address" itemscope itemtype="https://schema.org/PostalAddress")
+                    div(itemprop="streetAddress")
+                      | 3864 Courtney Street
+                      br
+                      | Suite #140A
+                    div
+                      span(itemprop="”addressLocality”") Bethlehem
+                      |,
+                      span<(itemprop="addressRegion") PA
+                      span<(itemprop="postalCode") 18017
+      .col-sm-4.col-md-4.col-sm-pull-8
+        = image_tag 'h-logo-white.svg', class: 'footer-logo'
+        p RB Associates provides prime commercial real estate for progressive companies throughout the Lehigh Valley, Pennsylvania and New Jersey.
 
-      .copyright
-        = image_tag 'h-logo-white.svg', class: 'footer-copyright-logo'
-        div &#169; RB Associates All Rights Reserved.
+    .copyright
+      .legal
+        = link_to 'Terms of Service', '/'
+        = link_to 'Privacy Policy', '/'
+      .rights &#169; RB Associates All Rights Reserved.

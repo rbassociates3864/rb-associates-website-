@@ -1,28 +1,41 @@
-.skyline {
-  height: 55px;
-  position: relative;
-  top: 5px;
-  margin-top: 3rem;
-  background: url(../images/skyline.svg) repeat-x;
+.footer {
+  padding: 5rem 0 0;
+  background: $footer-bg;
 
   @include breakpoint(md) {
-    height: 100px;
-    top: 10px;
-    margin-top: 9rem;
+    padding: 7rem 0 0;
   }
-}
-
-.footer {
-  padding: 3rem 0;
-  background: #111111;
 
   &,
   a {
-    color: #f1f1f1;
+    color: $footer-color;
+  }
+
+  .nav > li > a:hover, .nav > li > a:focus {
+    background: none;
+  }
+
+  .footer-widgets {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include breakpoint(sm) {
+      justify-content: flex-end;
+    }
   }
 
   .footer-widget {
-    margin-bottom: 2.5rem;
+    width: 33%;
+    margin-bottom: 3.5rem;
+
+    @include breakpoint(md) {
+      width: auto;
+      margin: 0 8rem 0 0;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
   }
 
   .footer-title {
@@ -30,7 +43,7 @@
     letter-spacing: 0.125rem;
     font-size: 1.25rem;
     text-transform: uppercase;
-    color: $footer-color;
+    color: #f1f1f1;
 
     @include breakpoint(md) {
       font-size: 1.5rem;
@@ -48,23 +61,39 @@
 
   .copyright {
     margin: 1rem 0 0;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     color: $footer-color;
+
+    @include breakpoint(sm) {
+      margin-top: 3rem;
+    }
   }
 
   .copyright {
-    text-align: center;
+    border-top: 1px solid lighten($footer-bg, 5%);
+    padding: 1rem 0;
+  }
+
+  .legal {
+    margin-bottom: 0.75rem;
+
+    @include breakpoint(md) {
+      float: right;
+      margin: 0;
+    }
+
+    a {
+      display: inline-block;
+      margin-right: 1rem;
+    }
   }
 }
 
 .footer-logo {
-  display: none;
-
-  @include breakpoint(md) {
-    display: inline-block;
-    width: 70%;
-    margin-top: 2rem;
-  }
+  display: inline-block;
+  width: 70%;
+  max-width: 20rem;
+  margin-bottom: 1.5rem;
 }
 
 .footer-contact-info {
@@ -79,9 +108,9 @@
 
 .footer-copyright-logo {
   width: 14rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 
-  @include breakpoint(md) {
+  @include breakpoint(sm) {
     display: none;
   }
 }

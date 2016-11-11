@@ -20,5 +20,38 @@ body.properties_index {
 }
 
 .btn-primary-alt {
-  @include button-variant($brand-primary, fade-out(#000000, 0.4), $brand-primary);
+  @include button-variant($brand-primary, #ffffff, $brand-primary);
+}
+
+.btn-white {
+  @include button-variant(#ffffff, transparent, #ffffff);
+}
+
+.more {
+  display: inline-block;
+  position: relative;
+  height: auto;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  @include plain-link($rb-red);
+
+  &:after {
+    position: relative;
+    right: -5px;
+    top: 0;
+    bottom: 1px;
+    height: 1em;
+    margin: auto;
+    font: 1rem/1 'fontawesome';
+    content: "\f054";
+    transition: right 0.25s;
+  }
+
+  &:hover {
+    &:after {
+      right: -10px;
+    }
+  }
 }

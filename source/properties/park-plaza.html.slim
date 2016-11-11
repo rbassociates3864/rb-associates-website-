@@ -346,6 +346,11 @@ section.big-background.park-plaza
             = image_tag 'camera.svg'
             span Photo Gallery
 
+          .owl-carousel.owl-theme
+            - 24.times do |idx|
+              a.test-popup-link(href="https://rb-associates.imgix.net/park-plaza/park-plaza-#{idx+1}.jpg?w=1000")
+                img(src="https://rb-associates.imgix.net/park-plaza/park-plaza-#{idx+1}.jpg?w=400")
+
     .col-md-4
       = partial 'layouts/partials/contact_form'
 

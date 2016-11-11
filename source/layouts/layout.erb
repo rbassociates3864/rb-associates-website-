@@ -32,15 +32,14 @@
         </div>
 
         <div class="collapse navbar-collapse" id="navbar_collapse">
-          <a href="tel:1234567890" class="btn btn-primary contact-btn">
+          <a href="tel:<%= data.agent.phone %>" class="btn btn-primary contact-btn">
             <i class="fa fa-phone"></i>
-            123-456-7890
+            <%= data.agent.display_phone %>
           </a>
 
           <ul class="nav navbar-nav">
             <li><a href="/" title='Home'>Home</a></li>
             <li><%= link_to 'Properties', '/properties.html', :relative => true %></li>
-            <li><%= link_to 'Our Process', '/process.html', :relative => true %></li>
           </ul>
         </div>
       </div>

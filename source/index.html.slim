@@ -8,13 +8,57 @@ title: Commercial Real Estate Developers in Lehigh Valley, PA
   h1.billboard-subtitle We're a client-focused commercial real estate company.
 
   .billboard__ctas
-    a.billboard-cta.btn.btn-primary(href='/') Contact Us
-    a.billboard-cta.btn.btn-primary-alt(href='/') View Properties
+    a.billboard-cta.btn.btn-primary(href='/contact/') Contact Us
+    a.billboard-cta.btn.btn-primary-alt(href='/properties/') View Properties
+
+section.section.section--clients
+  .container
+    ul.clientBlocks
+      li.clientBlock
+        = image_tag 'clients/beautyblender-logo.png'
+      li.clientBlock
+        = image_tag 'clients/easton-hospital-logo.png'
+      li.clientBlock
+        = image_tag 'clients/gymtime-logo.png'
+      li.clientBlock
+        = image_tag 'clients/windstream-logo.png'
 
 section.section.home-showcase
   .container
-    .home-showcase__title Welcome
-    .home-showcase__content R.B. Associates is a full-service commercial real estate owner and developer located in the heart of Pennsylvania’s Lehigh Valley. We believe the relationships built with our clients are invaluable. Therefore, we strive to conduct ourselves with the highest level of integrity and commitment possible.
+    h2.section__title Welcome
+    .home-showcase__content
+      .inner RB Associates is a full-service commercial real estate owner and developer located in the heart of Pennsylvania’s sprawling Lehigh Valley. We believe the relationships built with our clients are invaluable and strive to place our clients in a nutrient-rich environment for them to thrive in. We take pride in conducting ourselves with the highest level of integrity and commitment possible. We specialize in all aspects of commercial real estate and development.
+
+section.section.gray.section--process
+  .container
+    h2.section__title Our Flexfit™ Process
+    p.section__lead Leasing the correct commercial property for your application can be overwhelming. However our experienced team can put you on the fast track to your ideal site selection and space-planning needs. We have a proven history of helping our clients achieve and surpass their goals.
+
+    ul.processSteps
+      li.processStep
+        .number
+          .processStep__number 1
+        .inner
+          h4.processStep__title Discovery
+          .processStep__description We will examine your needs and objectives resulting in a cost-effective solution to your requirements.
+      li.processStep
+        .number
+          .processStep__number 2
+        .inner
+          h4.processStep__title SITE SELECTION AND BUILD-TO-SUIT
+          .processStep__description In this step, we will pinpoint your ideal geographical location based on your wants and needs. Taking all of your discovery objectives, we will develop an optimal build-to-suit space.
+      li.processStep
+        .number
+          .processStep__number 3
+        .inner
+          h4.processStep__title Lease/Opening Date
+          .processStep__description We’ll review all terms of your lease such as rental rate, length of lease, and first-year lease incentives. Once we agree upon the terms, it’s time to move in. After move in, you’ll be in good hands with our in-house property management team. We’ll make sure any problems that arise are resolved in a timely fashion.
+      li.processStep
+        .number
+          .processStep__number 4
+        .inner
+          h4.processStep__title Grow
+          .processStep__description We believe our success is your success. We understand that businesses change and so should the space they occupy. That’s why we’re here to help accommodate you every step of the way. Growth is your goal, and we’ll help you achieve it.
 
 section.section
   .container
@@ -22,27 +66,32 @@ section.section
 
     .featured-properties
       .row
-        .col-sm-12.col-md-6
-          .featured-property
-            = image_tag 'https://rb-associates.imgix.net/park-plaza.jpg?w=1200'
+        .col-sm-12.col-md-3
+          a.featured-property(href='/properties/courtney-2/')
+            = image_tag 'https://rb-associates.imgix.net/courtney-2.jpg?w=700'
+            .inner
+              h3.featured-property-title Courtney II
+        .col-sm-12.col-md-3
+          a.featured-property(href='/properties/park-plaza/')
+            = image_tag 'https://rb-associates.imgix.net/park-plaza.jpg?w=700'
             .inner
               h3.featured-property-title Park Plaza
-              = link_to 'Learn More', '/properties/park-plaza.html', class: 'featured-property-link'
-        .col-sm-12.col-md-6
-          .featured-property
-            = image_tag 'https://rb-associates.imgix.net/park-plaza.jpg?w=1200'
-            .inner
-              h3.featured-property-title Park Plaza
-              = link_to 'Learn More', '/park-plaza.html', relative: true, class: 'featured-property-link'
-        .col-sm-12.col-md-6
-          .featured-property
-            = image_tag 'https://rb-associates.imgix.net/lehigh-valley-animal-hospital.jpg?w=1200'
+        .col-sm-12.col-md-3
+          a.featured-property(href='/properties/locust-manor/')
+            = image_tag 'https://rb-associates.imgix.net/locust-manor.jpg?w=700'
             .inner
               h3.featured-property-title Locust Manor
-              = link_to 'Learn More', '/park-plaza.html', relative: true, class: 'featured-property-link'
-        .col-sm-12.col-md-6
-          .featured-property
-            = image_tag 'https://rb-associates.imgix.net/courtney-3.jpg?w=1200'
+        .col-sm-12.col-md-3
+          a.featured-property(href='/properties/hecktown-business-park/')
+            = image_tag 'https://rb-associates.imgix.net/hecktown-business-park.jpg?w=700'
             .inner
-              h3.featured-property-title Courtney III
-              = link_to 'Learn More', '/park-plaza.html', relative: true, class: 'featured-property-link'
+              h3.featured-property-title Hecktown Business Park
+      .otherActions
+        = link_to 'View All Properties', '/properties.html', class: 'more'
+
+section.section.section--contact
+  .container
+    .inner
+      .ready Ready to <b>Get Started</b>?
+      .cta
+        = link_to 'Call Us', '', class: 'btn btn-white btn-lg'

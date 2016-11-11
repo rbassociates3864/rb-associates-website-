@@ -3,7 +3,7 @@
 .billboard {
   position: relative;
   padding: 7rem 1.25rem;
-  background: url(https://rb-associates.imgix.net/park-plaza.jpg?w=2560) center center no-repeat;
+  background: url(https://rb-associates.imgix.net/courtney-3.jpg?w=1920) center center no-repeat;
   background-size: 100% 100%;
   text-transform: uppercase;
   text-align: center;
@@ -18,11 +18,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: fade-out(#000, 0.3);
+    background: fade-out(#000, 0.45);
   }
 
   @include breakpoint(md) {
-    padding: 22rem 12rem;
+    padding: 20rem 12rem;
 
     br {
       display: block;
@@ -68,7 +68,7 @@
   .billboard-cta {
     z-index: 1;
     position: relative;
-    padding: 1.125rem 1rem;
+    padding: 1.125rem 1.5rem;
     font-size: 1.5rem;
     text-transform: uppercase;
   }
@@ -82,22 +82,25 @@
 
 .featured-property {
   position: relative;
+  display: block;
   margin-bottom: 2rem;
+  border: 1px solid darken($section-gray-bg, 5%);
+  @include plain-link($gray-dark);
 
   img {
     width: 100%;
+
+    @include breakpoint(md) {
+      max-height: 19.75rem;
+    }
   }
 
   .inner {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 0.75rem;
-    background: fade-out(#000, 0.5);
+    padding: 1rem;
+    background: #ffffff;
 
     @include breakpoint(md) {
       padding: 1rem;
@@ -105,45 +108,120 @@
   }
 }
 
-.home-showcase {
-  background: #edeef4;
-}
-
-.home-showcase__title {
-  display: inline-block;
-  font-size: 3rem;
-  padding: 0;
-  margin: 0 0 3rem;
-  text-transform: uppercase;
-  border-bottom: 2px solid $gray;
-}
-
 .home-showcase__content {
-  width: 50%;
+  text-align: center;
+
+  .inner {
+    @include breakpoint(md) {
+      padding: 0 20rem;
+      margin: 0 auto;
+      font-size: 1.6rem;
+    }
+  }
 }
 
 .featured-property-title {
   margin: 0;
   padding: 0;
-  font-size: 1.75rem;
-  color: #ffffff;
+  font-size: 1.4rem;
+  color: $gray-dark;
   text-transform: uppercase;
 
   @include breakpoint(md) {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 
-.featured-property-link {
-  display: inline-block;
-  padding: 0.25rem 0.75rem;
-  font-size: 1.25rem;
-  color: #ffffff;
-  border: 1px solid #ffffff;
-  border-radius: 2px;
-  @include plain-link();
+.clientBlocks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  padding: 0;
+  margin: 0;
 
   @include breakpoint(md) {
-    font-size: 1.5rem;
+    flex-direction: row;
+  }
+}
+
+.clientBlock {
+  width: 50%;
+  margin: 0;
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include breakpoint(md) {
+    width: 25%;
+  }
+
+  img {
+    height: 3rem;
+
+    @include breakpoint(md) {
+      height: auto;
+      width: 73%;
+      max-width: 73%;
+    }
+  }
+}
+
+.processSteps {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+
+  @include breakpoint(md) {
+    padding: 0 20rem;
+  }
+}
+
+.processStep {
+  margin-bottom: 3rem;
+  text-align: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include breakpoint(md) {
+    display: flex;
+    text-align: left;
+  }
+
+  .inner {
+    @include breakpoint(md) {
+      padding-left: 2rem;
+    }
+  }
+}
+
+.processStep__number {
+  display: inline-block;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 0 0 1rem;
+  line-height: 3.5rem;
+  font-size: 1.75rem;
+  text-align: center;
+  color: #ffffff;
+  background: $rb-red;
+  border-radius: 50%;
+}
+
+.processStep__title {
+  padding: 0;
+  margin: 0 0 0.25rem;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+
+.featured-properties {
+  .otherActions {
+    text-align: center;
+    text-transform: uppercase;
   }
 }
