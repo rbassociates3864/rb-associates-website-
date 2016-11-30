@@ -15,6 +15,7 @@ gem 'middleman-livereload'
 gem 'middleman-slim', require: false
 gem 'middleman-autoprefixer'
 gem 'font-awesome-middleman'
+gem 'contentful_middleman', :github => 'contentful/contentful_middleman', :branch => 'dl/upgrade-to-v4'
 
 # Assets
 gem 'bootstrap-sass', '~> 3.3.6'

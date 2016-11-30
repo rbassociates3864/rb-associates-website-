@@ -31,6 +31,15 @@ configure :development do
   activate :livereload
 end
 
+activate :contentful do |f|
+  f.space         = {site: '16sb97v25yu7'}
+  f.access_token  = '09d86bb272bad2d92b1db19ea7e0cb33be1144da46115f618bcff1de1136060d'
+  f.cda_query = { limit: 10000 }
+  f.content_types = {
+    homepage: 'homepage'
+  }
+end
+
 ###
 # Helpers
 ###

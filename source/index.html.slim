@@ -2,10 +2,12 @@
 title: Commercial Real Estate Developers in Lehigh Valley, PA
 ---
 
+- homepage = data.site.homepage.first[1]
+
 .billboard
   .mask
-  p.billboard-title Grow With Us
-  h1.billboard-subtitle We're a client-focused commercial real estate company.
+  p.billboard-title= homepage['headline']
+  h1.billboard-subtitle= homepage['subHeadline']
 
   .billboard__ctas
     a.billboard-cta.btn.btn-primary(href='/contact/') Contact Us
@@ -27,39 +29,21 @@ section.section.home-showcase
   .container
     h2.section__title Welcome
     .home-showcase__content
-      .inner RB Associates is a full-service commercial real estate owner and developer located in the heart of Pennsylvania’s sprawling Lehigh Valley. We believe the relationships built with our clients are invaluable and strive to place our clients in a nutrient-rich environment for them to thrive in. We take pride in conducting ourselves with the highest level of integrity and commitment possible. We specialize in all aspects of commercial real estate and development.
+      .inner= homepage['welcomeText']
 
 section.section.gray.section--process
   .container
     h2.section__title Our Flexfit™ Process
-    p.section__lead Leasing the correct commercial property for your application can be overwhelming. However our experienced team can put you on the fast track to your ideal site selection and space-planning needs. We have a proven history of helping our clients achieve and surpass their goals.
+    p.section__lead= homepage['processText']
 
     ul.processSteps
-      li.processStep
-        .number
-          .processStep__number 1
-        .inner
-          h4.processStep__title Discovery
-          .processStep__description We will examine your needs and objectives resulting in a cost-effective solution to your requirements.
-      li.processStep
-        .number
-          .processStep__number 2
-        .inner
-          h4.processStep__title SITE SELECTION AND BUILD-TO-SUIT
-          .processStep__description In this step, we will pinpoint your ideal geographical location based on your wants and needs. Taking all of your discovery objectives, we will develop an optimal build-to-suit space.
-      li.processStep
-        .number
-          .processStep__number 3
-        .inner
-          h4.processStep__title Lease/Opening Date
-          .processStep__description We’ll review all terms of your lease such as rental rate, length of lease, and first-year lease incentives. Once we agree upon the terms, it’s time to move in. After move in, you’ll be in good hands with our in-house property management team. We’ll make sure any problems that arise are resolved in a timely fashion.
-      li.processStep
-        .number
-          .processStep__number 4
-        .inner
-          h4.processStep__title Grow
-          .processStep__description We believe our success is your success. We understand that businesses change and so should the space they occupy. That’s why we’re here to help accommodate you every step of the way. Growth is your goal, and we’ll help you achieve it.
-
+      - homepage['processSteps'].each.with_index(1) do |step, idx|
+        li.processStep
+          .number
+            .processStep__number= idx
+          .inner
+            h4.processStep__title= step['name']
+            .processStep__description= step['value']
 section.section
   .container
     h2.section__title Featured Properties
