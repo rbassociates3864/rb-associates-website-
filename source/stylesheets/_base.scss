@@ -35,7 +35,7 @@ body.properties_index {
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
-  @include plain-link($rb-red);
+  @include plain-link($blue-text);
 
   &:after {
     position: relative;
