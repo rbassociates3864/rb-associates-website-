@@ -55,3 +55,21 @@
     text-decoration: none;
   }
 }
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+@mixin fa-btn($side: 'left', $space: 0.7rem) {
+  i {
+    display: inline-block;
+
+    @if $side == left {
+      margin-right: $space;
+    }
+    @else if $side == right {
+      margin-left: $space;
+    }
+  }
+}

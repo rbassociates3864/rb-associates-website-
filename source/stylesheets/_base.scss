@@ -7,16 +7,19 @@ body {
 }
 
 body {
-  padding-top: $navbar-height;
+  padding-top: 61px;
 
   @include breakpoint(md) {
-    padding-top: 60px;
+    padding-top: $navbar-height;
   }
 }
 
 body.properties_index {
-  padding: 0;
   background: #f1f1f1;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
 }
 
 .btn-primary-alt {

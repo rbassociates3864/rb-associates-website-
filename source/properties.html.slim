@@ -7,22 +7,29 @@
   .properties__list
     h1.properties__title Our Properties
     ul.property-cards
-      - data.properties.each do |property|
+      - property_pages.each do |property|
         li.property-card
           .property-card__img
-            span.label.label-default= property.label_type
-            = image_tag "https://rb-associates.imgix.net/#{property.image}?w=300"
+            span.label.label-default= property.ownershipType
+            - if property.backgroundImage
+              = image_tag "#{property.backgroundImage.url}?w=500"
           .property-card__details
             .nap
               .label-wrap
-                span.label.label-default= property.label_type
+                span.label.label-default= property.ownershipType
               h2.property-card__title
                 = link_to property.name, "/properties/#{property.url}/"
-              address.property-card__address= property.address
+              address.property-card__address
+                span= property.address.strip
+                span,
+                span<= property.city.strip
+                span,
+                span<= property.state.strip.upcase
+                span<= property.zipCode.strip
             a.btn.btn-default.property-card__btn(href="/properties/#{property.url}/" title='View Property')
               | Details
               i.fa.fa-angle-right
-  .properties__map
+  .properties__map(ng-cloak='')
     ui-gmap-google-map(center='vm.map.center' zoom='vm.map.zoom')
       ui-gmap-window(show='vm.map.window.show' coords='vm.map.window.model.coords' options='vm.map.window.options')
         .inner

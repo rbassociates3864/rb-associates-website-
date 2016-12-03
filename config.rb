@@ -29,6 +29,7 @@ activate :directory_indexes
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
+  config[:host] = "http://localhost:4567"
 end
 
 activate :contentful do |f|
@@ -36,7 +37,8 @@ activate :contentful do |f|
   f.access_token  = '09d86bb272bad2d92b1db19ea7e0cb33be1144da46115f618bcff1de1136060d'
   f.cda_query = { limit: 10000 }
   f.content_types = {
-    homepage: 'homepage'
+    homepage: 'homepage',
+    propertyPage: 'propertyPage'
   }
 end
 
@@ -44,13 +46,42 @@ end
 # Helpers
 ###
 
+helpers do
+  def property_pages
+    properties = [].tap do |properties|
+      data.site.propertyPage.each do |p|
+        properties << OpenStruct.new(p[1])
+      end
+    end
+
+    properties.sort_by!(&:name)
+  end
+
+  def nav_link_to(link, url, opts={})
+    expected_url = config[:host]
+    expected_url += current_page.url unless (current_page.url == '/')
+
+    if expected_url == url
+      prefix = '<li class="site-nav-item active" role="presentation">'
+    else
+      prefix = '<li class="site-nav-item" role="presentation">'
+    end
+    prefix + link_to(link, url, opts) + "</li>"
+  end
+end
+
 # Methods defined in the helpers block are available in templates
 # helpers do
 # end
 
 # Build-specific configuration
 configure :build do
+
+  # Host
+  config[:host] = "https://www.rbassociates.com"
+
   activate :autoprefixer
+
   # Minify CSS on build
   # activate :minify_css
 

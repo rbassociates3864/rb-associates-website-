@@ -11,40 +11,11 @@
     <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
 
     <%= stylesheet_link_tag :site %>
-    <%= javascript_include_tag :all %>
   </head>
 
   <body class="<%= page_classes %> <%= current_page.data.page_class %>">
 
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar_collapse" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">
-            <%= image_tag 'h-logo.svg' %>
-          </a>
-        </div>
-
-        <div class="collapse navbar-collapse" id="navbar_collapse">
-          <a href="tel:<%= data.agent.phone %>" class="btn btn-primary contact-btn">
-            <i class="fa fa-phone"></i>
-            <%= data.agent.display_phone %>
-          </a>
-
-          <ul class="nav navbar-nav">
-            <li><a href="/" title='Home'>Home</a></li>
-            <li><%= link_to 'Properties', '/properties.html', :relative => true %></li>
-          </ul>
-        </div>
-      </div>
-
-    </nav>
+    <%= partial 'layouts/partials/nav' %>
 
     <%= yield %>
 
@@ -53,5 +24,6 @@
     <% end %>
 
     <script async='' defer='' src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAR2oIlybRzb1TK5NQCMXFfQD57p2bODI"></script>
+    <%= javascript_include_tag :all %>
   </body>
 </html>

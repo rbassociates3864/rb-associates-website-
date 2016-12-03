@@ -19,4 +19,6 @@
 
 bower_components
 
+# Contentful
 /data/site
+.site-space-hash

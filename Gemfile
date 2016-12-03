@@ -1,6 +1,12 @@
+require 'rbconfig'
+
 # If you do not have OpenSSL installed, change
 # the following line to use 'http://'
 source 'https://rubygems.org'
+
+if RbConfig::CONFIG['target_os'] =~ /darwin(1[0-3])/i
+  gem 'rb-fsevent', '<= 0.9.4'
+end
 
 # For faster file watcher updates on Windows:
 gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]

@@ -10,8 +10,11 @@ do ->
     ])
 
   $(document).ready ->
+
+    # Background Videos
     $('.player').mb_YTPlayer()
 
+    # Property Photo Gallery
     $('.owl-carousel').owlCarousel({
       items: 3,
       margin: 15,
@@ -25,3 +28,8 @@ do ->
         enabled: true
       }
     })
+
+    # Nav Toggle
+    $('.mobile-nav-toggle').click ->
+      $(this).toggleClass('open')
+      $('.mobile-header').toggleClass('open animated fadeInRight')

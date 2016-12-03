@@ -22,11 +22,16 @@ $border-radius-base:        2px !default;
 $border-radius-large:       3px !default;
 $border-radius-small:       1px !default;
 
+// Mobile Nav
+
+$mobile-nav-bg:             $footer-bg;
+$mobile-nav-border:         lighten($footer-bg, 30%);
+
 //== Navbar
 //
 //##
 
-$navbar-height:                   55px !default;
+$navbar-height:                   75px !default;
 $navbar-default-color:            #333333;
 $navbar-default-bg:               fade-out(#ffffff, 0.05);
 

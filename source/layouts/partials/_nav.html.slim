@@ -1,0 +1,28 @@
+.mobile-header(role='navigation')
+  ul.mobile-header-nav(role='menubar')
+    li= link_to 'Home', "#{config[:host]}", role: 'menuitem'
+    li= link_to 'Properties', "#{config[:host]}/properties/", role: 'menuitem'
+    li= link_to 'Contact', "#{config[:host]}/contact/", role: 'menuitem'
+
+header.site-header
+  .container
+    a.site-nav-logo href="/" title='Logo'
+      = image_tag 'h-logo.svg', alt: 'Logo'
+
+    .mobile-nav-toggle
+      span
+      span
+      span
+      span
+      span
+      span
+
+    .site-nav(role='navigation')
+      ul(role='menubar')
+        = nav_link_to('Home', "#{config[:host]}", {role: 'menuitem'})
+        = nav_link_to('Properties', "#{config[:host]}/properties/", {role: 'menuitem'})
+        = nav_link_to('Contact', "#{config[:host]}/contact/", {role: 'menuitem'})
+        li.site-nav-item
+          a.btn.btn-contact href="tel:+1#{data.agent.phone}"
+            i.fa.fa-phone
+            = data.agent.display_phone
