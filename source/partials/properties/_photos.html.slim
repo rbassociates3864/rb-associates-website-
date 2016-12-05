@@ -1,10 +1,12 @@
-section.section
-  .inner
-    h2.section__title
-      = image_tag 'camera.svg'
-      span Photo Gallery
+- if property&.photos&.any?
 
-    .owl-carousel.owl-theme
-      - 11.times do |idx|
-        a.test-popup-link(href="https://rb-associates.imgix.net/268-brodhead/268-brodhead-#{idx+1}.jpg?w=800")
-          img(src="https://rb-associates.imgix.net/268-brodhead/268-brodhead-#{idx+1}.jpg?w=400")
+  section.section
+    .inner
+      h2.section__title
+        = image_tag 'camera.svg'
+        span Photo Gallery
+
+      .owl-carousel.owl-theme
+        - property.photos.each do |photo|
+          a.test-popup-link(href="#{photo.url}?w=800")
+            img(src="#{photo.url}?w=400" alt="#{photo.title}")

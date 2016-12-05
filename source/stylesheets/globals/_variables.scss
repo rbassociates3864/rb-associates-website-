@@ -56,5 +56,5 @@ $label-default-bg:            #444 !default;
 
 
 //== Tabs
-$nav-tabs-border-color: $blue-text;
-$nav-tabs-active-link-hover-border-color: $blue-text;
+$nav-tabs-border-color: darken(#ddd, 5%);
+$nav-tabs-active-link-hover-border-color: darken(#ddd, 5%);

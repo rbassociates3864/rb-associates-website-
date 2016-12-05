@@ -203,13 +203,14 @@
 // SHOW
 
 .big-background {
+  z-index:550;
   height: 100%;
   min-height:250px;
   height: 250px;
   position:relative;
   overflow:hidden;
 
-  img {
+  > img {
     z-index: -1;
     position: absolute;
     left: 50%;

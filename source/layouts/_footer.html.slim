@@ -20,7 +20,7 @@ footer.footer
               li
                 div(itemscope="" itemtype="https://schema.org/LocalBusiness")
                   div
-                    a(href="tel:+14842250994" itemprop="telephone") 484-225-0994
+                    a(href="tel:+1#{data.agent.phone}" itemprop="telephone")= data.agent.display_phone
                   div(itemprop="name") RB Associates
                   div(itemprop="address" itemscope itemtype="https://schema.org/PostalAddress")
                     div(itemprop="streetAddress")

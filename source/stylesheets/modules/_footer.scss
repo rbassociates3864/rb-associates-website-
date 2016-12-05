@@ -114,3 +114,13 @@
     display: none;
   }
 }
+
+body.properties_details {
+  .footer {
+    margin-top: 4rem;
+
+    @include breakpoint(sm) {
+      margin-top: 7rem;
+    }
+  }
+}

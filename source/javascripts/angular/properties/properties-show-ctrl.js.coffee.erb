@@ -4,8 +4,6 @@ do ->
   PropertiesShowCtrl = ->
     ctrl = @
 
-    ctrl.properties = JSON.parse '<%= data.properties.to_json %>'
-
     ctrl.map =
       center:
         latitude: 40.7059511
@@ -25,18 +23,18 @@ do ->
           pixelOffset: new google.maps.Size(0, -35, 'px', 'px')
         }
 
-    ctrl.setProperty = (id) ->
-      fetchedProperties = JSON.parse '<%= data.properties.to_json %>'
-      return unless currentProperty = _.find(fetchedProperties, id: id)
+    ctrl.setProperty = (url) ->
+      fetchedProperties = window.propertyPages
+      return unless currentProperty = _.find(fetchedProperties, url: url)
 
-      ctrl.map.center.latitude  = currentProperty.lat
-      ctrl.map.center.longitude = currentProperty.long
+      ctrl.map.center.latitude  = currentProperty.coordinates.lat
+      ctrl.map.center.longitude = currentProperty.coordinates.lon
 
       ctrl.map.markers = [
         id: currentProperty.id
         coords:
-          latitude: currentProperty.lat
-          longitude: currentProperty.long
+          latitude: currentProperty.coordinates.lat
+          longitude: currentProperty.coordinates.lon
       ]
 
     return

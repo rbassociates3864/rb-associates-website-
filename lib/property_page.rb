@@ -4,6 +4,7 @@ class PropertyPage
     :name,
     :url,
     :bgVideo,
+    :bgMap,
     :backgroundImage,
     :price,
     :ownershipType,
@@ -15,6 +16,7 @@ class PropertyPage
     :description,
     :detailSections,
     :propertySpaceTypes,
+    :photos,
     :videos
   ]
 
