@@ -3,128 +3,19 @@ title: 750 S 25th St, Easton, PA 18042
 page_class: properties_details
 ---
 
-section.big-background.property_25th-street-easton
+- property = find_property_by_url('25th-street-easton')
 
-  .container
-    .property__details
-      h1.property__details__title 750 S 25th St
-      .property__details__specs
-        .location
-          i.fa.fa-map-marker
-          | Easton | PA
-        .property__details__price-availibility
-          .price $13 S/F
-          .availibility
-            | Units Available:
-            span.amount 1
+section.big-background
+  = partial 'partials/properties/details', locals: {property: property}
 
 .container
   .row
     .col-md-8
-
-      section.section
-        .inner
-          h2.section__title
-            = image_tag 'chat.svg'
-            span Description
-          p Here is a fantastic location that is in a very high traffic area on 25th street in Easton, located directly across from the Home Depot and Giant.
-          p This property is located directly across from the Home Depot and Giant and would be perfect for a number of retail uses.
-          p Location is currently being used as a bicycle shop and is a brand new turn-key fit out.
-          p This premier location is next to Eyeland and has great access to many major highways including 78 , 22 , 33 and also downtown Easton.
-
-      section.section
-        .inner
-          h2.section__title
-            = image_tag 'info.svg'
-            span Essential Information
-
-          h3 Lot
-
-          .row
-            .col-md-6
-              table.table
-                tbody
-                  tr
-                    th Rental Rate
-                    td $13 /SF/Year
-                  tr
-                    th Property Type
-                    td Retail
-                  tr
-                    th Property Sub-type
-                    td Strip Center
-            .col-md-6
-              table.table
-                tbody
-                  tr
-                    th Gross Leasable Area
-                    td 7,377 SQ
-                  tr
-                    th Lot Size
-                    td 0.32 AC
-
-          h3 Utilites/Area
-
-          .row
-            .col-md-6
-              table.table
-                tbody
-                  tr
-                    th Gas Source
-                    td Public
-                  tr
-                    th Electric Source
-                    td Public
-                  tr
-                    th Water Source
-                    td Public
-                  tr
-                    th Sewer Source
-                    td Public
-            .col-md-6
-              table.table
-                tbody
-                  tr
-                    th Zoning Code
-                    td C-1-Local Commercial
-                  tr
-                    th Road Type
-                    td Paved
-                  tr
-                    th Topography
-                    td Level
-
-      section.section
-        .inner
-          h2.section__title
-            = image_tag 'SpaceAvailable.svg'
-            span 1 Space Available
-
-          .space
-            h4.space__title Space 1
-
-            .row
-              .col-md-6
-                table.table
-                  tbody
-                    tr
-                      th Rental Rate
-                      td $13 /SF/Year
-                    tr
-                      th Space Available
-                      td 	1,160 SF
-                    tr
-                      th Space Type
-                      td Strip Center
-              .col-md-6
-                table.table
-                  tbody
-                    tr
-                      th Lease Type
-                      td NNN
-                    tr
-                      th Date Available
-                      td May 2016
+      = partial 'partials/properties/desc', locals: {property: property}
+      = partial 'partials/properties/info', locals: {property: property}
+      = partial 'partials/properties/spaces', locals: {property: property}
+      = partial 'partials/properties/photos', locals: {property: property}
 
     .col-md-4
       = partial 'layouts/partials/contact_form'
+      = partial 'partials/properties/videos', locals: {property: property}

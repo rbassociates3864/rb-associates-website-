@@ -50,6 +50,9 @@ class PropertyPage
 
   def spaces_count
     count = 0
+
+    return count unless self.propertySpaceTypes
+
     self.propertySpaceTypes.each do |space_type|
       continue unless space_type.propertySpaces
       count += space_type.propertySpaces.count
