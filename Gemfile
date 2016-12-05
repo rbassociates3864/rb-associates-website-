@@ -4,6 +4,8 @@ require 'rbconfig'
 # the following line to use 'http://'
 source 'https://rubygems.org'
 
+ruby "2.3.1"
+
 if RbConfig::CONFIG['target_os'] =~ /darwin(1[0-3])/i
   gem 'rb-fsevent', '<= 0.9.4'
 end

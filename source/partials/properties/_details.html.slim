@@ -1,0 +1,16 @@
+- if property.backgroundImage
+  = image_tag "#{property.backgroundImage.url}?w=1920"
+
+- if property.bgVideo
+  #bgndVideo.player data-property="{videoURL:'https://youtu.be/#{property.bgVideo.youTubeId}', containment:'.big-background', showYTLogo: false, showControls: false, autoPlay:true, mute:true, startAt:#{property.bgVideo.startsAt}, opacity:1}"
+
+.container
+  .property__details
+    h1.property__details__title= property.name
+    .property__details__specs
+      .location
+        i.fa.fa-map-marker
+        span= "#{property.city} | #{property.state}"
+      .property__details__price-availibility
+        .price= property.price
+        .availibility

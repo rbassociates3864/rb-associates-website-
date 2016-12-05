@@ -1,0 +1,32 @@
+section.section
+  .inner
+
+    h2.section__title
+      = image_tag 'SpaceAvailable.svg'
+      span= "#{property.spaces_count_with_label} Available"
+
+    ul.nav.nav-tabs.spaceTabs(role='tablist')
+      - property.propertySpaceTypes.each_with_index do |space_type, idx|
+        - cssClass = (idx == 0) ? 'active' : ''
+        li(class="#{cssClass}" role='presentation')
+          a(href="##{space_type.name}" aria-controls="#{space_type.name}" role='tab' data-toggle='tab')= space_type.name
+
+    .tab-content
+      - property.propertySpaceTypes.each_with_index do |space_type, idx|
+        - cssClass = (idx == 0) ? 'active' : ''
+
+        .tab-pane(id="#{space_type.name}" class="#{cssClass}" role="tabpanel")
+
+          - space_type.propertySpaces.each do |space|
+            .space
+              h4.space__title= space.name
+
+              .row
+                - space.details.each_slice( (space.details.size/2.0).round ).to_a.each do |array|
+                  .col-md-6
+                    table.table
+                      tbody
+                        - array.each do |detail|
+                          tr
+                            th= detail.name
+                            td= detail.value.html_safe

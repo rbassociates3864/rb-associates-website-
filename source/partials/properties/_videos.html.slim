@@ -1,0 +1,9 @@
+- if property&.videos&.any?
+  section.section
+    .inner
+      h4.section__title
+        = image_tag 'Video.svg'
+        span Videos    
+
+    - property.videos.each do |video|
+      iframe(width='100%' src="https://www.youtube.com/embed/#{video}" frameborder="0" allowfullscreen="")

@@ -3,6 +3,9 @@
   hide_footer: true
 ---
 
+javascript:
+  window.propertyPages = #{property_pages_to_json};
+
 .properties__container(data-ng-controller='PropertiesIndexCtrl as vm')
   .properties__list
     h1.properties__title Our Properties
@@ -20,12 +23,12 @@
               h2.property-card__title
                 = link_to property.name, "/properties/#{property.url}/"
               address.property-card__address
-                span= property.address.strip
+                span= property.address
                 span,
-                span<= property.city.strip
+                span<= property.city
                 span,
-                span<= property.state.strip.upcase
-                span<= property.zipCode.strip
+                span<= property.state.upcase
+                span<= property.zipCode
             a.btn.btn-default.property-card__btn(href="/properties/#{property.url}/" title='View Property')
               | Details
               i.fa.fa-angle-right

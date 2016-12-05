@@ -4,8 +4,6 @@ do ->
   PropertiesIndexCtrl = ->
     ctrl = @
 
-    ctrl.properties = JSON.parse '<%= data.properties.to_json %>'
-
     ctrl.map =
       center:
         latitude: 40.7059511
@@ -26,20 +24,19 @@ do ->
         }
 
     ctrl.init = ->
-      fetchedProperties = JSON.parse '<%= data.properties.to_json %>'
+      fetchedProperties = window.propertyPages
 
       ctrl.map.markers = _.tap [], (properties) ->
         angular.forEach fetchedProperties, (p, idx) ->
           property =
             id: idx
             coords:
-              latitude: p.lat
-              longitude: p.long
+              latitude: p.coordinates.lat
+              longitude: p.coordinates.lon
             name: p.name
-            address: p.address
+            address: "#{p.address}, #{p.city}, #{p.state} #{p.zipCode}"
             url: p.url
           properties.push(property)
-
 
     ctrl.init()
 

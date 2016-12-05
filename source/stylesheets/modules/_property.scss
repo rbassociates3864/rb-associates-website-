@@ -203,15 +203,20 @@
 // SHOW
 
 .big-background {
-  z-index:550;
   height: 100%;
   min-height:250px;
   height: 250px;
   position:relative;
   overflow:hidden;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+
+  img {
+    z-index: -1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
 
   @include breakpoint(md) {
     display: flex;
@@ -244,7 +249,6 @@
 
 .big-background {
   &.property_25th-street-easton { background-image: url('https://rb-associates.imgix.net/25th-street-easton.jpg?w=1920') }
-  &.property_268-brodhead { background-image: url('https://rb-associates.imgix.net/268-brodhead.jpg?w=1920') }
   &.property_locust-manor{ background-image: url('https://rb-associates.imgix.net/locust-manor.jpg?w=1920') }
   &.courtney-1 { background-image: url('https://rb-associates.imgix.net/courtney-1.jpg?w=1920') }
   &.courtney-2 { background-image: url('https://rb-associates.imgix.net/courtney-2.jpg?w=1920') }
@@ -420,8 +424,22 @@
   font-weight: 500;
 }
 
+.spaceTabs {
+  a {
+
+    @include breakpoint(sm) {
+      @include font-size(1.6);
+    }
+  }
+
+  > li.active > a {
+    font-weight: 700;
+    color: $gray-dark;
+  }
+}
+
 .space {
-  margin-bottom: 2rem;
+  margin: 2rem 0 2rem;
   padding: 1rem;
   border: 1px solid darken($table-border-color, 5%);
 
@@ -435,6 +453,7 @@
 }
 
 .space__title {
+  @include font-size(1.6);
   margin: 0 0 1rem;
   color: $brand-primary;
 }

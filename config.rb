@@ -1,5 +1,7 @@
 require 'slim'
 
+require 'lib/property_page'
+
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -48,13 +50,21 @@ end
 
 helpers do
   def property_pages
+    PropertyPage.all(data.site.propertyPage)
+  end
+
+  def property_pages_to_json
     properties = [].tap do |properties|
-      data.site.propertyPage.each do |p|
-        properties << OpenStruct.new(p[1])
+      PropertyPage.all(data.site.propertyPage).each do |pp|
+        properties << pp.as_json
       end
     end
 
-    properties.sort_by!(&:name)
+    properties.to_json
+  end
+
+  def find_property_by_url(url)
+    property_pages.find { |p| p.url == url }
   end
 
   def nav_link_to(link, url, opts={})

@@ -1,0 +1,6 @@
+section.section
+  .inner
+    h2.section__title
+      = image_tag 'chat.svg'
+      span Description
+    = Kramdown::Document.new(property.description).to_html
