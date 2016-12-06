@@ -1,19 +1,18 @@
-section.section
-  .inner
+- if property&.propertySpaceTypes&.any?
+  section.section
+    .inner
 
-    h2.section__title
-      = image_tag 'SpaceAvailable.svg'
-      span= "#{property.spaces_count_with_label} Available"
+      h2.section__title
+        = image_tag 'SpaceAvailable.svg'
+        span= "#{property.spaces_count_with_label} Available"
 
-    ul.nav.nav-tabs.spaceTabs(role='tablist')
-      - if property&.propertySpaceTypes&.any?
+      ul.nav.nav-tabs.spaceTabs(role='tablist')
         - property.propertySpaceTypes.each_with_index do |space_type, idx|
           - cssClass = (idx == 0) ? 'active' : ''
           li(class="#{cssClass}" role='presentation')
             a(href="##{space_type.name}" aria-controls="#{space_type.name}" role='tab' data-toggle='tab')= space_type.name
 
-    .tab-content
-      - if property&.propertySpaceTypes&.any?
+      .tab-content
         - property.propertySpaceTypes.each_with_index do |space_type, idx|
           - cssClass = (idx == 0) ? 'active' : ''
 
