@@ -3,150 +3,19 @@ title: Courtney III - 2550 Brodhead Rd, Bethlehem, PA 18017
 page_class: properties_details
 ---
 
-section.big-background.courtney-3
-  #bgndVideo.player data-property="{videoURL:'https://youtu.be/TQOPeaS_Ebw', containment:'.big-background', showYTLogo: false, showControls: false, autoPlay:true, mute:true, startAt:64, opacity:1}"
+- property = find_property_by_url('courtney-III')
 
-  .container
-    .property__details
-      h1.property__details__title Courtney III
-      .property__details__specs
-        .location
-          i.fa.fa-map-marker
-          | Bethlehem | PA
-        .property__details__price-availibility
-          .price $1 /SF/Year
-          .availibility
-            | Spaces Available:
-            span.amount 1
+section.big-background
+  = partial 'partials/properties/details', locals: {property: property}
 
 .container
   .row
     .col-md-8
-
-      section.section
-        .inner
-          h2.section__title
-            = image_tag 'chat.svg'
-            span Description
-          p Building features fantastic Architecture that incorporates a dramatic front entrance showcased in Rose colored glass. Fantastic location near rt 22 - 78 - 191 and 512.
-          p Located on the north east side of the Bethlehem Industrial park. This fantastic second floor suite can be built to suit from 1500 sq ft to 3373 sq ft. This space is offered at $ 12.00 dollars a sq ft NNN.
-          p From route 22 exit at 191 exit proceed north make right on to Broadhead Rd continue less than a half mile building on the left.
-
-      section.section
-        .inner
-          h2.section__title
-            = image_tag 'info.svg'
-            span Essential Information
-
-          h3 Lot
-
-          .row
-            .col-md-6
-              table.table
-                tbody
-                  tr
-                    th Property Type
-                    td Industrial
-                  tr
-                    th Property Sub-type
-                    td Office Building
-            .col-md-6
-              table.table
-                tbody
-                  tr
-                    th Building Size
-                    td 53,760 SF
-                  tr
-                    th Building Class
-                    td A
-                  tr
-                    th Lot Size
-                    td 3.94 AC
-
-          h3 Utilities/Area
-
-          .row
-            .col-md-6
-              table.table
-                tbody
-                  tr
-                    th Gas Source
-                    td Public
-                  tr
-                    th Electric Source
-                    td Public
-                  tr
-                    th Water Source
-                    td Public
-                  tr
-                    th Sewer Source
-                    td Public
-            .col-md-6
-              table.table
-                tbody
-                  tr
-                    th Zoning Code
-                    td
-                      | Li-Light Industrial/Office
-                      br
-                      | Campus
-                  tr
-                    th Road Type
-                    td Paved
-                  tr
-                    th Topography
-                    td Level
-
-      section.section
-        .inner
-          h2.section__title
-            = image_tag 'SpaceAvailable.svg'
-            span 1 Space Available
-
-          .space
-            h4.space__title Space 201/202
-
-            .row
-              .col-md-6
-                table.table
-                  tbody
-                    tr
-                      th Rental Rate
-                      td $1,500 /Month
-                    tr
-                      th Space Available
-                      td 1,500 SF
-                    tr
-                      th Max. Contiguous
-                      td 	3,373 SF
-              .col-md-6
-                table.table
-                  tbody
-                    tr
-                      th Space Type
-                      td Office Building
-                    tr
-                      th Lease Type
-                      td NNN
-
-      section.section
-        .inner
-          h2.section__title
-            = image_tag 'camera.svg'
-            span Photo Gallery
-
-          .owl-carousel.owl-theme
-            - 6.times do |idx|
-              a.test-popup-link(href="https://rb-associates.imgix.net/courtney-3/courtney-3-#{idx+1}.jpg?w=800")
-                img(src="https://rb-associates.imgix.net/courtney-3/courtney-3-#{idx+1}.jpg?w=400")
+      = partial 'partials/properties/desc', locals: {property: property}
+      = partial 'partials/properties/info', locals: {property: property}
+      = partial 'partials/properties/spaces', locals: {property: property}
+      = partial 'partials/properties/photos', locals: {property: property}
 
     .col-md-4
       = partial 'layouts/partials/contact_form'
-
-      section.section
-        .inner
-          h4.section__title
-            = image_tag 'Video.svg'
-            span Videos
-
-          <iframe width="100%" src="https://www.youtube.com/embed/TQOPeaS_Ebw" frameborder="0" allowfullscreen></iframe>
+      = partial 'partials/properties/videos', locals: {property: property}
