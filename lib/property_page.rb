@@ -85,7 +85,7 @@ class PropertyPage
   def _set_spaces_title(count, plural_label)
     case count
     when 1
-      return "1 #{plural_label}.chop"
+      return "1 #{plural_label.chop}"
     else
       return "#{count} #{plural_label}"
     end
