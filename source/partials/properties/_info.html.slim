@@ -3,7 +3,7 @@ section.section
     h2.section__title
       = image_tag 'info.svg'
       span Essential Information
-      
+
     - if property&.detailSections&.any?
 
       - property.detailSections.each do |section|
@@ -17,4 +17,4 @@ section.section
                   - array.each do |detail|
                     tr
                       th= detail.name
-                      td= detail.value
+                      td= detail.value.html_safe

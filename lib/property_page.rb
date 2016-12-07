@@ -63,15 +63,31 @@ class PropertyPage
     count
   end
 
+  def space_types_count
+    count = 0
+    return count unless self.propertySpaceTypes
+    count = self.propertySpaceTypes.count
+  end
+
   def spaces_count_with_label
-    count = self.spaces_count
-    case count
-    when 0
-      return '0 Spaces'
-    when 1
-      return '1 Space'
+    spaces_count = self.spaces_count
+    space_types_count = self.space_types_count
+
+    if space_types_count == 1
+      _set_spaces_title(spaces_count, self.propertySpaceTypes[0].name)
     else
-      return "#{count} Spaces"
+      _set_spaces_title(spaces_count, 'Spaces')
+    end
+  end
+
+  private
+
+  def _set_spaces_title(count, plural_label)
+    case count
+    when 1
+      return "1 #{plural_label}.chop"
+    else
+      return "#{count} #{plural_label}"
     end
   end
 

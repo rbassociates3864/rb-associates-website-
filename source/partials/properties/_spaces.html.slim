@@ -6,11 +6,13 @@
         = image_tag 'SpaceAvailable.svg'
         span= "#{property.spaces_count_with_label} Available"
 
-      ul.nav.nav-tabs.spaceTabs(role='tablist')
-        - property.propertySpaceTypes.each_with_index do |space_type, idx|
-          - cssClass = (idx == 0) ? 'active' : ''
-          li(class="#{cssClass}" role='presentation')
-            a(href="##{space_type.name}" aria-controls="#{space_type.name}" role='tab' data-toggle='tab')= space_type.name
+
+      - if property.space_types_count > 1
+        ul.nav.nav-tabs.spaceTabs(role='tablist')
+          - property.propertySpaceTypes.each_with_index do |space_type, idx|
+            - cssClass = (idx == 0) ? 'active' : ''
+            li(class="#{cssClass}" role='presentation')
+              a(href="##{space_type.name}" aria-controls="#{space_type.name}" role='tab' data-toggle='tab')= space_type.name
 
       .tab-content
         - property.propertySpaceTypes.each_with_index do |space_type, idx|
