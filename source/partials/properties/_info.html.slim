@@ -1,20 +1,20 @@
-section.section
-  .inner
-    h2.section__title
-      = image_tag 'info.svg'
-      span Essential Information
+- if property&.detailSections&.any?
 
-    - if property&.detailSections&.any?
+  section.section
+    .inner
+      h2.section__title
+        = image_tag 'info.svg'
+        span Essential Information
 
-      - property.detailSections.each do |section|
-        h3= section.name
+        - property.detailSections.each do |section|
+          h3= section.name
 
-        .row
-          - section.details.each_slice( (section.details.size/2.0).round ).to_a.each do |array|
-            .col-md-6
-              table.table
-                tbody
-                  - array.each do |detail|
-                    tr
-                      th= detail.name
-                      td= detail.value.html_safe
+          .row
+            - section.details.each_slice( (section.details.size/2.0).round ).to_a.each do |array|
+              .col-md-6
+                table.table
+                  tbody
+                    - array.each do |detail|
+                      tr
+                        th= detail.name
+                        td= detail.value.html_safe

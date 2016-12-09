@@ -3,129 +3,19 @@ title: Hecktown Business Park, Easton, PA 18045
 page_class: properties_details
 ---
 
-section.big-background.hecktown-business-park
-  #bgndVideo.player data-property="{videoURL:'https://youtu.be/8uTv-94B9n0', containment:'.big-background', showYTLogo: false, showControls: false, autoPlay:true, mute:true, startAt:43, opacity:1}"
+- property = find_property_by_url('hecktown-business-park')
 
-  .container
-    .property__details
-      h1.property__details__title Hecktown Business Park
-      .property__details__specs
-        .location
-          i.fa.fa-map-marker
-          | Easton | PA
-        .property__details__price-availibility
-          .price Prices Vary
-          .availibility
-            | Lots Available:
-            span.amount 3
+section.big-background
+  = partial 'partials/properties/details', locals: {property: property}
 
 .container
   .row
     .col-md-8
-
-      section.section
-        .inner
-          h2.section__title
-            = image_tag 'chat.svg'
-            span Description
-          p Hecktown Business Park is located on the southeastern corner of Hecktown Road and Route 33 Interchange in Lower Nazareth and Bethlehem Twps, PA. Close proximity to Allentown and Easton. Only 5 miles north of Rt. 78, and about 1/2 mile from Rt. 22. Close to existing major retail outlets such as WalMart and Wegmans. Easy Access from Commerce Drive off Hecktown Road. PENNDot traffic data reports the daily average traffic count of Route 33 alone is 51,423 vehicles and that amount is expected to increase at a 2% annual growth.
-
-      section.section
-        .inner
-          h2.section__title
-            = image_tag 'SpaceAvailable.svg'
-            span 3 Lots Available
-
-          .space
-            h4.space__title Lot 6
-
-            .row
-              .col-md-6
-                table.table
-                  tbody
-                    tr
-                      th Price
-                      td $3,926,250.17
-                    tr
-                      th Lot Size
-                      td 17.45 AC
-                    tr
-                      th Price/AC
-                      td $225,000
-              .col-md-6
-                table.table
-                  tbody
-                    tr
-                      th Lot Type
-                      td Commercial/Other (land)
-
-          .space
-            h4.space__title Lot 7
-
-            .row
-              .col-md-6
-                table.table
-                  tbody
-                    tr
-                      th Price
-                      td $5,364,000.03
-                    tr
-                      th Lot Size
-                      td 23.84 AC
-                    tr
-                      th Price/AC
-                      td $225,000
-              .col-md-6
-                table.table
-                  tbody
-                    tr
-                      th Lot Type
-                      td Commercial/Other (land)
-                    tr
-                      th APN / Parcel ID
-                      td 5065 00 4417 6327
-
-          .space
-            h4.space__title Lot 8
-
-            .row
-              .col-md-6
-                table.table
-                  tbody
-                    tr
-                      th Price
-                      td $1,375,000
-                    tr
-                      th Lot Size
-                      td 5.50 AC
-              .col-md-6
-                table.table
-                  tbody
-                    tr
-                      th Price/AC
-                      td $250,000
-                    tr
-                      th Lot Type
-                      td Industrial (land)
-
-      section.section
-        .inner
-          h2.section__title
-            = image_tag 'camera.svg'
-            span Photo Gallery
-
-          .owl-carousel.owl-theme
-            - 7.times do |idx|
-              a.test-popup-link(href="https://rb-associates.imgix.net/hecktown-business-park/hecktown-business-park-#{idx+1}.jpg?w=800")
-                img(src="https://rb-associates.imgix.net/hecktown-business-park/hecktown-business-park-#{idx+1}.jpg?w=400")
+      = partial 'partials/properties/desc', locals: {property: property}
+      = partial 'partials/properties/info', locals: {property: property}
+      = partial 'partials/properties/spaces', locals: {property: property}
+      = partial 'partials/properties/photos', locals: {property: property}
 
     .col-md-4
       = partial 'layouts/partials/contact_form'
-
-      section.section
-        .inner
-          h4.section__title
-            = image_tag 'Video.svg'
-            span Videos
-
-          <iframe width="100%" src="https://www.youtube.com/embed/8uTv-94B9n0" frameborder="0" allowfullscreen></iframe>
+      = partial 'partials/properties/videos', locals: {property: property}
