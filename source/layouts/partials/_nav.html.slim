@@ -3,6 +3,9 @@
     li= link_to 'Home', "#{config[:host]}", role: 'menuitem'
     li= link_to 'Properties', "#{config[:host]}/properties/", role: 'menuitem'
     li= link_to 'Contact', "#{config[:host]}/contact/", role: 'menuitem'
+    a.btn.btn-contact href="tel:+1#{data.agent.phone}"
+      i.fa.fa-phone
+      = data.agent.display_phone
 
 header.site-header
   .container

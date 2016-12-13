@@ -37,6 +37,15 @@
         border: none;
       }
     }
+
+    .btn-contact {
+      @include fa-btn();
+      margin-top: 2.5rem;
+      background: $blue-text;
+      color: #fff;
+      padding: 1rem;
+      border: 2px solid $blue-text;
+    }
   }
 }
 
