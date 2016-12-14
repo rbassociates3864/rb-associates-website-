@@ -1,0 +1,20 @@
+.contact--form {
+  .btn {
+    width: 100%;
+    text-transform: uppercase;
+    padding: 15px 0;
+  }
+
+  textarea {
+    @include breakpoint(md) {
+      height: 108px;
+    }
+  }
+}
+
+
+.billboard--contact {
+  padding: 4rem 0;
+  background-image: none;
+  background: $blue-text;
+}

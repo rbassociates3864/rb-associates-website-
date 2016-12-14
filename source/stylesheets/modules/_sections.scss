@@ -45,3 +45,19 @@
   padding: 1.5rem 0;
   background: #f3f3f4;
 }
+
+.section--contact {
+  padding-bottom: 0;
+
+  .section__title {
+    margin: 0 0 1rem;
+
+    &:after {
+      // display: none;
+    }
+  }
+
+  .section__lead {
+    margin: 0;
+  }
+}
