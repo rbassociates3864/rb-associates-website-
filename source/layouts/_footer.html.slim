@@ -6,9 +6,9 @@ footer.footer
           .footer-widget
             h3.footer-title Company
             ul.nav
-              li= link_to 'Home', '/'
-              li= link_to 'Properties', '/'
-              li= link_to 'Contact', '/'
+              li= link_to 'Home', "#{config[:host]}"
+              li= link_to 'Properties', "#{config[:host]}/properties/"
+              li= link_to 'Contact', "#{config[:host]}/contact/"
           .footer-widget
             h3.footer-title Contact
             ul.nav.footer-contact-info

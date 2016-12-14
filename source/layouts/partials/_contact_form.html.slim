@@ -1,9 +1,9 @@
 section.section
   .inner
-    h4.section__title 
+    h4.section__title
       = image_tag 'Contact.svg'
       span Contact
-    
+
     .agent
       .agent__profile
         .agent__pic
@@ -13,7 +13,7 @@ section.section
           .agent__details-phone
             = link_to data.agent.display_phone, "tel:#{data.agent.phone}"
       .agent__contact-form
-        = form_tag '/contact' do
+        form(name='property-contact' action='contact-thanks' netlify='')
           .form-group
             = text_field_tag :name, class: 'form-control', placeholder: 'Name'
           .form-group

@@ -9,7 +9,7 @@ body {
 body {
   padding-top: 61px;
 
-  @include breakpoint(md) {
+  @include breakpoint(sm) {
     padding-top: $navbar-height;
   }
 }

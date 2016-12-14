@@ -16,24 +16,24 @@ section.section
         .col-md-4
           .form-group
             label Name
-            = text_field_tag :name, class: 'form-control'
+            = text_field_tag :name, class: 'form-control', placeholder: 'Name'
           .form-group
             label Email
-            = email_field_tag :email, class: 'form-control'
+            = email_field_tag :email, class: 'form-control', placeholder: 'Email'
 
         .col-md-4
           .form-group
             label Company
-            = text_field_tag :company, class: 'form-control'
+            = text_field_tag :company, class: 'form-control', placeholder: 'Company'
           .form-group
             label Phone
-            = text_field_tag :phone, class: 'form-control'
+            = text_field_tag :phone, class: 'form-control', placeholder: 'Phone'
 
         .col-md-4
 
           .form-group
             label Message
-            = text_area_tag :message, class: 'form-control'
+            = text_area_tag :message, class: 'form-control', placeholder: 'Message'
 
       .form-group
         = submit_tag 'Contact Us Now', class: 'btn btn-primary'

@@ -12,13 +12,14 @@
           .property-card__img
             span.label.label-default= property.ownershipType
             - if property.backgroundImage
-              = image_tag "#{property.backgroundImage.url}?w=500"
+              a(href="/properties/#{property.url}/" title='View Property')
+                = image_tag "#{property.backgroundImage.url}?w=500"
           .property-card__details
             .nap
               .label-wrap
                 span.label.label-default= property.ownershipType
               h2.property-card__title
-                = link_to property.name, "/properties/#{property.url}/"
+                = link_to property.name, "/properties/#{property.url}/", title: 'View Property'
               address.property-card__address
                 span= property.address
                 span,
