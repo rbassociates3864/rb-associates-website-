@@ -6,8 +6,9 @@
         = image_tag 'info.svg'
         span Essential Information
 
-        - property.detailSections.each do |section|
-          h3= section.name
+      - property.detailSections.each do |section|
+        .property-info-block
+          h4= section.name
 
           .row
             - section.details.each_slice( (section.details.size/2.0).round ).to_a.each do |array|
