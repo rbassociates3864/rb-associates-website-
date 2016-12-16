@@ -204,19 +204,22 @@
 
 .big-background {
   z-index:550;
-  height: 100%;
-  min-height:250px;
-  height: 250px;
   position:relative;
   overflow:hidden;
 
   > img {
-    z-index: -1;
-    position: absolute;
-    left: 50%;
-    top: 50%;
     width: 100%;
-    transform: translate(-50%, -50%);
+    min-height: 250px;
+
+    @include breakpoint(md) {
+      z-index: -1;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 100%;
+      height: auto;
+      transform: translate(-50%, -50%);
+    }
   }
 
   @include breakpoint(md) {
@@ -242,21 +245,12 @@
     position: static !important;
 
     @include breakpoint(md) {
-      z-index: 0;
       position: relative !important;
     }
   }
 }
 
 .big-background {
-  &.property_25th-street-easton { background-image: url('https://rb-associates.imgix.net/25th-street-easton.jpg?w=1920') }
-  &.property_locust-manor{ background-image: url('https://rb-associates.imgix.net/locust-manor.jpg?w=1920') }
-  &.courtney-1 { background-image: url('https://rb-associates.imgix.net/courtney-1.jpg?w=1920') }
-  &.courtney-2 { background-image: url('https://rb-associates.imgix.net/courtney-2.jpg?w=1920') }
-  &.courtney-3 { background-image: url('https://rb-associates.imgix.net/courtney-3.jpg?w=1920') }
-  &.park-plaza { background-image: url('https://rb-associates.imgix.net/park-plaza.jpg?w=1920') }
-  &.hecktown-business-park { background-image: url('https://rb-associates.imgix.net/hecktown-business-park.jpg?w=1920') }
-  &.forks-landing { background-image: url('https://rb-associates.imgix.net/forks-landing.jpg?h=400') }
   &.lafayette-fairfield {
     @include breakpoint(md) {
       .container {
@@ -306,6 +300,11 @@
 
 .property__details__specs {
   line-height: 1;
+  display: flex;
+
+  @include breakpoint(md) {
+    display: block;
+  }
 
   .fa {
     display: inline-block;
@@ -314,17 +313,21 @@
   }
 
   .location {
-    padding-bottom: 1.5rem;
+    width: 50%;
 
     @include breakpoint(md) {
+      width: 100%;
       padding-bottom: 1.75rem;
     }
   }
 
   .price {
-    padding-right: 1.5rem;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     color: #fff;
+
+    @include breakpoint(md) {
+      font-size: 1.75rem;
+    }
   }
 
   .availibility {
@@ -351,8 +354,14 @@
 }
 
 .property__details__price-availibility {
+  width: 50%;
   display: flex;
-  align-items: center;
+  justify-content: flex-end;
+
+  @include breakpoint(md) {
+    width: auto;
+    justify-content: flex-start;
+  }
 }
 
 .properties_details {
@@ -457,7 +466,6 @@
 .space__title {
   @include font-size(1.6);
   margin: 0 0 1rem;
-  color: $brand-primary;
 }
 
 .agent__profile {
@@ -501,4 +509,11 @@
   width: 100%;
   padding: 0.75rem 0;
   text-transform: uppercase;
+}
+
+.section--propertyInfo,
+.section--propertySpaces {
+  th, td {
+    width: 50%;
+  }
 }

@@ -1,12 +1,12 @@
+- if property.bgMap
+  ui-gmap-google-map(center='vm.map.center' zoom='vm.map.zoom' ng-init=" vm.setProperty('#{property.url}') ")
+    ui-gmap-markers(models='vm.map.markers' coords="'coords'")
+
 - if property.backgroundImage
   = image_tag "#{property.backgroundImage.url}?w=1920"
 
 - if property.bgVideo
   #bgndVideo.player data-property="{videoURL:'https://youtu.be/#{property.bgVideo.youTubeId}', containment:'.big-background', showYTLogo: false, showControls: false, autoPlay:true, mute:true, startAt:#{property.bgVideo.startsAt}, opacity:1}"
-
-- if property.bgMap
-  ui-gmap-google-map(center='vm.map.center' zoom='vm.map.zoom' ng-init=" vm.setProperty('#{property.url}') ")
-    ui-gmap-markers(models='vm.map.markers' coords="'coords'")
 
 .container
   .property__details

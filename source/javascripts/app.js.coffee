@@ -16,8 +16,8 @@ do ->
 
     # Property Photo Gallery
     $('.owl-carousel').owlCarousel({
-      items: 3,
-      margin: 15,
+      items: 3
+      margin: 15
       dots: true
     })
 
