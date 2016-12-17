@@ -25,5 +25,7 @@ gem 'middleman-autoprefixer'
 gem 'font-awesome-middleman'
 gem 'contentful_middleman', :github => 'contentful/contentful_middleman', :branch => 'dl/upgrade-to-v4'
 
+gem 'builder'
+
 # Assets
 gem 'bootstrap-sass', '~> 3.3.6'
