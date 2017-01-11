@@ -17,7 +17,8 @@ class PropertyPage
     :detailSections,
     :propertySpaceTypes,
     :photos,
-    :videos
+    :videos,
+    :testimonials
   ]
 
   attr_reader(*ATTRS)

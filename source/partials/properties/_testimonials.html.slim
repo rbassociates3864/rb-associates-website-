@@ -1,0 +1,10 @@
+- if property&.testimonials&.any?
+  section.section
+    .inner
+      h4.section__title
+        = image_tag 'chat.svg'
+        span testimonials
+
+    .text-center
+      - property.testimonials.each do |t|
+        = link_to t.name, t.attachment.url, target: '_blank'
