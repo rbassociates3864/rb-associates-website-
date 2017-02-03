@@ -65,6 +65,8 @@
     color: $footer-color;
 
     @include breakpoint(sm) {
+      display: flex;
+      justify-content: space-between;
       margin-top: 3rem;
     }
   }
@@ -74,17 +76,21 @@
     padding: 1rem 0;
   }
 
-  .legal {
-    margin-bottom: 0.75rem;
+  .rights {
+    text-align: center;
 
-    @include breakpoint(md) {
-      float: right;
-      margin: 0;
+    @include breakpoint(sm) {
+      text-align: left;
     }
+  }
 
-    a {
-      display: inline-block;
-      margin-right: 1rem;
+  .developed-by {
+    padding-top: 0.5rem;
+    text-align: center;
+
+    @include breakpoint(sm) {
+      padding-top: 0;
+      text-align: left;
     }
   }
 
