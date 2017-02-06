@@ -27,5 +27,8 @@ gem 'contentful_middleman', :github => 'contentful/contentful_middleman', :branc
 
 gem 'builder'
 
+# Google Analytics
+gem 'middleman-google-analytics', '~> 3.0'
+
 # Assets
 gem 'bootstrap-sass', '~> 3.3.6'

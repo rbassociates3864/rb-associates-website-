@@ -30,6 +30,11 @@ sprockets.append_path File.join(root, "bower_components")
 # Pretty URLs
 activate :directory_indexes
 
+# Google Analytics
+activate :google_analytics do |ga|
+  ga.tracking_id = 'UA-91433385-1'
+end
+
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
