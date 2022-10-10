@@ -27,7 +27,7 @@ gem 'contentful_middleman' , :github => 'contentful/contentful_middleman', :bran
 gem 'slim', '~> 3.0.7'
 
 gem 'builder'
-
+gem 'haml', '~> 5.0'
 # Google Analytics
 gem 'middleman-google-analytics', '~> 3.0'
 
