@@ -10,7 +10,7 @@ priority: 1.0
   .mask
   #bgndVideo.player data-property="{videoURL:'https://youtu.be/G7BwRKsklTQ', containment:'.billboard', showYTLogo: false, showControls: false, autoPlay:true, mute:true, opacity:1}"
   p.billboard-title= homepage['headline']
-  h1.billboard-subtitle= homepage['subHeadline']
+  h1.billboard-subtitle= homepage['sub_headline']
 
   .billboard__ctas
     a.billboard-cta.btn.btn-primary(href='/contact/') Contact Us
@@ -32,15 +32,15 @@ section.section.home-showcase
   .container
     h2.section__title Welcome
     .home-showcase__content
-      .inner= homepage['welcomeText']
+      .inner= homepage['welcome_text']
 
 section.section.gray.section--process
   .container
     h2.section__title Our Flexfit™ Process
-    p.section__lead= homepage['processText']
+    p.section__lead= homepage['process_text']
 
     ul.processSteps
-      - homepage['processSteps'].each.with_index(1) do |step, idx|
+      - homepage['process_steps'].each.with_index(1) do |step, idx|
         li.processStep
           .number
             .processStep__number= idx
@@ -53,10 +53,10 @@ section.section
 
     .featured-properties
       .row
-        - homepage.featuredProperties.each do |p|
+        - homepage.featured_properties.each do |p|
           .col-sm-12.col-md-3
             a.featured-property(href="#{config[:host]}/properties/#{p.url}")
-              = image_tag "#{p.backgroundImage.url}?w=700"
+              = image_tag "#{p.background_image.url}?w=700"
               .inner
                 h3.featured-property-title= p.name
 
