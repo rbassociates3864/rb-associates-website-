@@ -63,14 +63,6 @@
   label_type: sale
   address: 750 S 25th St, Easton, PA 18042
 -
-  name: Forks Landing
-  lat: 40.72934
-  long: -75.2303829
-  image: forks-landing.jpg
-  url: forks-landing
-  label_type: sale
-  address: Sullivan Trail, Forks Township, PA 18040
--
   id: lafayette
   name: Lafayette & West Fairfield
   lat: 40.7055188
